@@ -1,0 +1,1307 @@
+{
+    "sellerInitialData" : [
+        "product_type", "asset_type", "states", "ideal_closing_days", "heard", "selling_reason"
+    ],
+    "loanInitialData" : [
+        "interestRate", "lienPosition", "loanStatus"
+    ],
+    "residentialInitialData" : [
+        "bathrooms", "bedrooms"
+    ],
+    "commercialInitialData" : [
+        "stories", "units"
+    ],
+    "buyerFormSteps": [
+        {
+            "step": "PLAN",
+            "stepForm": "PLAN TYPE"
+        },
+        {
+            "step": "BUYER",
+            "stepForm": "BUYER LOGIN"
+        },
+        {
+            "step": "PROFILE",
+            "stepForm": "PROFILE TYPE"
+        },
+        {
+            "step": "CONFIRM",
+            "stepForm": "CHECKOUY"
+        }
+    ],
+    "agentFormSteps": [
+        {
+            "step": "AGENT",
+            "stepForm": "AGENT INFORMATION"
+        },
+        {
+            "step": "PREFERENCES",
+            "stepForm": "PREFERENCES"
+        },
+        {
+            "step": "DIRECT PAY",
+            "stepForm": "DIRECT PAY"
+        },
+        {
+            "step": "UPLOAD",
+            "stepForm": "UPLOAD"
+        }
+    ],
+    "teamFormSteps": [
+        {
+            "step": "TEAM",
+            "stepForm": "TEAM MEMBER INFORMATION"
+        },
+        {
+            "step": "PREFERENCES",
+            "stepForm": "PREFERENCES"
+        },
+        {
+            "step": "DIRECT PAY",
+            "stepForm": "DIRECT PAY"
+        },
+        {
+            "step": "UPLOAD",
+            "stepForm": "UPLOAD"
+        }
+    ],
+    "sellerFormSteps": [
+        {
+            "step": "SELLER",
+            "stepForm": "SELLER INFORMATION"
+        },
+        {
+            "step": "PROPERTY",
+            "stepForm": "PROPERTY INFORMATION"
+        },
+        {
+            "step": "FINANCIAL",
+            "stepForm": "FINANCIAL INFORMATION"
+        },
+        {
+            "step": "SUBMIT",
+            "stepForm": "GENERAL Information"
+        }
+    ],    
+    "owner": [
+        {
+            "label": "No",
+            "value": "0"
+        },
+        {
+            "label": "Yes",
+            "value": "1"
+        }
+    ],    
+    "haveRealEstateLicense": [
+        {
+            "label": "No",
+            "value": "0"
+        },
+        {
+            "label": "Yes",
+            "value": "1"
+        }
+    ],    
+    "assetTypes": [
+        {
+            "label": "Residential",
+            "value": "Residential"
+        },
+        {
+            "label": "Commercial",
+            "value": "Commercial"
+        }
+    ],        
+    "isListedWithRealEstateAgent": [
+        {
+            "label": "No",
+            "value": "0"
+        },
+        {
+            "label": "Yes",
+            "value": "1"
+        }
+    ],
+    "areTaxesCurrent": [
+        {
+            "label": "No",
+            "value": "0"
+        },
+        {
+            "label": "Yes",
+            "value": "1"
+        }
+    ],    
+    "alsoMailingAddress": [
+        {
+            "label": "No",
+            "value": "0"
+        },
+        {
+            "label": "Yes",
+            "value": "1"
+        }
+    ],
+    "cardTypes": [
+        {
+            "label": "data:image/png;base64,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",
+            "value": "Visa"
+        },
+        {
+            "label": "data:image/png;base64,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",
+            "value": "Mastercard"
+        },
+        {
+            "label": "data:image/png;base64,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",
+            "value": "Amex"
+        }
+    ],
+    "months": [
+        {
+            "label": "01",
+            "value": "1"
+        },
+        {
+            "label": "02",
+            "value": "2"
+        },
+        {
+            "label": "03",
+            "value": "3"
+        },
+        {
+            "label": "04",
+            "value": "4"
+        },
+        {
+            "label": "05",
+            "value": "5"
+        },
+        {
+            "label": "06",
+            "value": "6"
+        },
+        {
+            "label": "07",
+            "value": "7"
+        },
+        {
+            "label": "08",
+            "value": "8"
+        },
+        {
+            "label": "09",
+            "value": "9"
+        },
+        {
+            "label": "10",
+            "value": "10"
+        },
+        {
+            "label": "11",
+            "value": "11"
+        },
+        {
+            "label": "12",
+            "value": "12"
+        }
+    ],
+    "profileType": [
+        {
+            "label": "Home Buyer",
+            "value": "Home Buyer"
+        },
+        {
+            "label": "Individual Invester (Non-Accredited)",
+            "value": "Individual Invester (Non-Accredited)"
+        },
+        {
+            "label": "Individual Invester (Accredited)",
+            "value": "Individual Invester (Accredited)"
+        },
+        {
+            "label": "Small Business Investor",
+            "value": "Small Business Investor"
+        },
+        {
+            "label": "Large Business Investor",
+            "value": "Large Business Investor"
+        },
+        {
+            "label": "Institutional Investor",
+            "value": "Institutional Investor"
+        }
+    ],
+    "purchase": [
+        {
+            "label": "0",
+            "value": "0",
+            "id":"0"
+        },
+        {
+            "label": "1",
+            "value": "1",
+            "id":"1"
+        },
+        {
+            "label": "2",
+            "value": "2",
+            "id":"2"
+        },
+        {
+            "label": "3+",
+            "value": "3+",
+            "id":"3"
+        },
+        {
+            "label": "5+",
+            "value": "5+",
+            "id":"4"
+        },
+        {
+            "label": "7+",
+            "value": "7+",
+            "id":"5"
+        },
+        {
+            "label": "10+",
+            "value": "10+",
+            "id":"6"
+        }
+    ],
+    "are_you_cash_buyer": [
+        {
+            "label": "0% - No, Never",
+            "value": "0",
+            "id":"0"
+        },
+        {
+            "label": "25% - Occasionally",
+            "value": "25",
+            "id":"1"
+        },
+        {
+            "label": "50% - Most Times",
+            "value": "50",
+            "id":"2"
+        },
+        {
+            "label": "75% - Frequently",
+            "value": "75",
+            "id":"3"
+        },
+        {
+            "label": "100% - Yes, Always",
+            "value": "100",
+            "id":"4"
+        }
+    ],
+    "closing_period": [
+        {
+            "label": "7 Days less",
+            "value": "7 Days less",
+            "id":"0"
+        },
+        {
+            "label": "7 Days+",
+            "value": "7 Days+",
+            "id":"1"
+        },
+        {
+            "label": "15 Days+",
+            "value": "15 Days+",
+            "id":"2"
+        },
+        {
+            "label": "30 Days+",
+            "value": "30 Days+",
+            "id":"3"
+        },
+        {
+            "label": "45 Days+",
+            "value": "45 Days+",
+            "id":"4"
+        },
+        {
+            "label": "60 Days+",
+            "value": "60 Days+",
+            "id":"5"
+        },
+        {
+            "label": "90 Days+",
+            "value": "90 Days+",
+            "id":"0"
+        }
+    ],
+    "buy_in": [
+        {
+            "label": "ASAP",
+            "value": "ASAP",
+            "id":"0"
+        },
+        {
+            "label": "30 Days+",
+            "value": "30 Days+",
+            "id":"1"
+        },
+        {
+            "label": "60 Days+",
+            "value": "60 Days+",
+            "id":"2"
+        },
+        {
+            "label": "90 Days+",
+            "value": "90 Days+",
+            "id":"3"
+        },
+        {
+            "label": "Not Sure",
+            "value": "Not Sure",
+            "id":"4"
+        }
+    ],
+    "are_you_agent": [
+        {
+            "label": "No",
+            "value": "0",
+            "id":"0"
+        },
+        {
+            "label": "Yes",
+            "value": "1",
+            "id":"2"
+        }
+    ],    
+    "heard": [         
+        {
+            "label": "Blog",
+            "value":1
+        },
+        {
+            "label": "Direct Mail",
+            "value":2
+        },
+        {
+            "label": "Email",
+            "value":3
+        },
+        {
+            "label": "Event",
+            "value":4
+        },
+        {
+            "label": "Facebook",
+            "value":5
+        },
+        {
+            "label": "Family/Friend",
+            "value":6
+        },
+        {
+            "label": "Google",
+            "value":7
+        },
+        {
+            "label": "Instagram",
+            "value":8
+        },
+        {
+            "label": "Linkedin",
+            "value":9
+        },
+        {
+            "label": "Magazine",
+            "value":10
+        },
+        {
+            "label": "Newspaper",
+            "value":11
+        },
+        {
+            "label": "Postcard",
+            "value":12
+        },
+        {
+            "label": "Radio",
+            "value":13
+        },
+        {
+            "label": "Sign/Outdoor",
+            "value":14
+        },
+        {
+            "label": "Twitter",
+            "value":15
+        },
+        {
+            "label": "TV/Cable",
+            "value":16
+        },
+        {
+            "label": "Website",
+            "value":17
+        },
+        {
+            "label": "Word of Mouth",
+            "value":18
+        },
+        {
+            "label": "YouTube",
+            "value":19
+        },
+        {
+            "label": "Other",
+            "value":20
+        }  
+    ],    
+    "sellerFormData": {
+        "field-first-name": "",
+        "field-last-name": "",
+        "field-product-type": "",
+        "field-owner-yet": "",
+        "field-work-phone": "",
+        "field-mobile-phone": "",
+        "field-email":"",
+        "field-address": "",
+        "field-suite": "",
+        "field-city": "",
+        "field-state": "",
+        "field-zip": "",
+        "field-asset-type": "",
+        "field-property-type": "",
+        "field-property-used": "",
+        "field-bedrooms": "",
+        "field-bathrooms": "",
+        "field-square-feet": "",
+        "field-loan-status": "",
+        "field-lien-position": "",
+        "field-interest-rate": "",
+        "field-maturity-date": "",
+        "field-units": "",
+        "field-stories": "",
+        "field-asking-price": "",
+        "field-listed": "",
+        "field-what-price": "",
+        "field-mortgage-balance": "",
+        "field-annual-taxes": "",
+        "field-taxes-current": "",
+        "field-closing-date": "",
+        "field-reason-selling": "",
+        "field-heard-about-us": "",
+        "field-promo-code": ""
+    },
+    "agentOnBoardFormData": {
+        "field-first-name": "",
+        "field-last-name": "",
+        "field-home-phone": "",
+        "field-mobile-phone": "",
+        "field-home-email": "",
+        "gender": "",
+        "dob": "",
+        "field-address": "",
+        "address-suit": "",
+        "field-city": "",
+        "field-state": "",
+        "field-country": "",
+        "field-zip": "",
+        "real-estate-license": "",
+        "field-licence-type": "",
+        "field-license-state": "",
+        "field-licence-number": "",
+        "field-expiration-date": "",
+        "field-license-issued": "",
+        "department-name": "",
+        "position-name": "",
+        "who-i-report": "",
+        "first-preference-state": "",
+        "first-preference-country": "",
+        "second-preference-state": "",
+        "second-preference-country": "",
+        "third-preference-state": "",
+        "third-preference-country": "",
+        "product-type": "",
+        "asset-type": "",
+        "direct-pay": "",
+        "field-bank-name": "",
+        "field-account-number": "",
+        "field-routing-number": "",
+        "field-bank-address": "",
+        "address_suit": "",
+        "field-directPay-city": "",
+        "field-directPay-state": "",
+        "field-directPay-zip": "",
+        "field-bank-phone": "",
+        "field-same-as-home-address": ""
+    },
+    "buyerFormData": {
+        "plan":"",
+        "email": "",
+        "first_name": "",
+        "last_name": "",
+        "phone": "",
+        "work_phone": "",
+        "password": "",
+        "password_confirmation": "",
+        "job_title": "",
+        "gender": "MALE",
+        "dob": "",
+        "profile_type_id": "",
+        "country": "",
+        "address": "",
+        "company_name": "",
+        "address_suit": "",
+        "city": "",
+        "state": "",
+        "zip": "",
+        "also_mailing_address": "",
+        "closing_period": "",
+        "buy_in": "",
+        "are_you_cash_buyer": "",
+        "are_you_agent": "",
+        "purchase": "",
+        "heard": "",
+        "card-type": "",
+        "card-number":"",
+        "name-on-card":"",
+        "cvc":"",
+        "exp-month": "",
+        "exp-year":"",
+        "birth-month":"", 
+        "birth-date":"", 
+        "birth-year":""
+    },
+    "contactFormData":{
+        "field-first-name":"",
+        "field-last-name":"",
+        "field-phone":"",
+        "field-email":"",
+        "field-subject":"",
+        "field-message":""
+    },    
+
+    "preferenceFormData": {
+        "location_state": "",
+        "location_county": "",
+        "location_city": "",
+        "product_type_id": "",
+        "asset_type_id": "",
+        "property_type_id": "",
+        "price_range": "",
+        "stories": "",
+        "units": "",
+        "idealsqft": "",
+        "bedrooms": "",
+        "bathrooms": "",
+        "loan_status": "",
+        "lien_position": "",
+        "interest_rate": ""
+    },
+    "contactAgentFormData": {
+        "field-contact-info": "",
+        "field-email": "",
+        "field-name": "",
+        "field-phone": "",
+        "field-interested": ""
+    },
+    "countries":[{"code": "US", "name":"United States"}],
+    "states":[{"code":"AL","name":"Alabama"},{"code":"AK","name":"Alaska"},{"code":"AZ","name":"Arizona"},{"code":"AR","name":"Arkansas"},{"code":"CA","name":"California"},{"code":"CO","name":"Colorado"},{"code":"CT","name":"Connecticut"},{"code":"DE","name":"Delaware"},{"code":"DC","name":"District of Columbia"},{"code":"FL","name":"Florida"},{"code":"GA","name":"Georgia"},{"code":"HI","name":"Hawaii"},{"code":"ID","name":"Idaho"},{"code":"IL","name":"Illinois"},{"code":"IN","name":"Indiana"},{"code":"IA","name":"Iowa"},{"code":"KS","name":"Kansas"},{"code":"KY","name":"Kentucky"},{"code":"LA","name":"Louisiana"},{"code":"ME","name":"Maine"},{"code":"MD","name":"Maryland"},{"code":"MA","name":"Massachusetts"},{"code":"MI","name":"Michigan"},{"code":"MN","name":"Minnesota"},{"code":"MS","name":"Mississippi"},{"code":"MO","name":"Missouri"},{"code":"MT","name":"Montana"},{"code":"NE","name":"Nebraska"},{"code":"NV","name":"Nevada"},{"code":"NH","name":"New Hampshire"},{"code":"NJ","name":"New Jersey"},{"code":"NM","name":"New Mexico"},{"code":"NY","name":"New York"},{"code":"NC","name":"North Carolina"},{"code":"ND","name":"North Dakota"},{"code":"OH","name":"Ohio"},{"code":"OK","name":"Oklahoma"},{"code":"OR","name":"Oregon"},{"code":"PA","name":"Pennsylvania"},{"code":"RI","name":"Rhode Island"},{"code":"SC","name":"South Carolina"},{"code":"SD","name":"South Dakota"},{"code":"TN","name":"Tennessee"},{"code":"TX","name":"Texas"},{"code":"UT","name":"Utah"},{"code":"VT","name":"Vermont"},{"code":"VA","name":"Virginia"},{"code":"WA","name":"Washington"},{"code":"WV","name":"West Virginia"},{"code":"WI","name":"Wisconsin"},{"code":"WY","name":"Wyoming"}],
+    "buyerPlans":{
+        "1":{"name":"Basic Investor", "monthlyAmount":24.97,"yearlyAmount":180.00},
+        "2":{"name":"Preferred Investor", "monthlyAmount":149.97,"yearlyAmount":1350.00},
+        "3":{"name":"First-mover Investor", "monthlyAmount":998.97,"yearlyAmount":8991.00}
+    },
+    "allBuyerPlans":[
+        {"name":"basic-investor-monthly","id":1},
+        {"name":"basic-investor-yearly","id": 2},
+        {"name":"preferred-investor-monthly","id": 3},
+        {"name":"preferred-investor-yearly","id": 4},
+        {"name":"first-mover-investor-yearly","id": 5},
+        {"name":"first-mover-investor-yearly-discount","id": 6}
+    ],
+    "Product Type":[
+        {"name":"All","id":"All"},
+        {"name":"Real Estate","id": 1},
+        {"name":"Mortgage Note","id": 2}
+    ],
+    "Asset Type":[
+        {"name":"All","id": "All"},
+        {"name":"Commercial","id": 1},
+        {"name":"Residential","id": 2}
+    ],
+    "CommercialPropertyType":[ {"name":"All","id":"All"},{ "id": 2, "name": "Hotel" }, { "id": 3, "name": "Industrial" }, { "id": 4, "name": "Land" }, { "id": 7, "name": "Multi-Family" }, { "id": 24, "name": "Retail" }, { "id": 6, "name": "Speciality" }, { "id": 8, "name": "Office" }, { "id": 27, "name": "Other" }, { "id": 30, "name": "Hotel-NL" }, { "id": 29, "name": "Industrial-NL" }, { "id": 3, "name": "Land-NL" }, { "id": 4, "name": "Multi-Family-NL" }, { "id": 29, "name": "Retail-NL" }, { "id": 6, "name": "Speciality-NL" }, { "id": 7, "name": "Office-NL" }, { "id": 8, "name": "Other-NL" } ],
+    "ResidentialPropertyType":[{"name":"All","id":"All"},{"id":9,"name":"Brownstone"},{"id":10,"name":"Condo"},{"id":11,"name":"Co-op"},{"id":13,"name":"Mobile Home"},{"id":12,"name":"House (Single-Family)"},{"id":15,"name":"Townhouse"},{"id":23,"name":"Other"},{"id":14,"name":"Multifamily (4 Units or less)"}],
+    "Investor Type":[
+        {"name":"All","id":"All"},
+        {"name":"Basic","id":"Basic"},
+        {"name":"Preferred","id":"Preferred"},
+        {"name":"First-Mover","id":"First-Mover"}
+    ],
+    "Price": [
+        {
+            "id": 1,
+            "name": "$100K and less"
+        },
+        {
+            "id": 2,
+            "name": "$100K to $249K"
+        },
+        {
+            "id": 3,
+            "name": "$250K to $499K"
+        },
+        {
+            "id": 4,
+            "name": "$500K to $999K"
+        },
+        {
+            "id": 5,
+            "name": "$1M to $1.9M"
+        },
+        {
+            "id": 6,
+            "name": "$2M to $2.9M"
+        },
+        {
+            "id": 7,
+            "name": "$3M to $3.9M"
+        },
+        {
+            "id": 8,
+            "name": "$4M to $4.9M"
+        },
+        {
+            "id": 9,
+            "name": "$5M to $9.9M"
+        },
+        {
+            "id": 10,
+            "name": "$10M and up"
+        },
+        {
+            "id": 11,
+            "name": "No Limits"
+        }
+    ],
+    "Bedrooms": [
+        {
+            "id": "All",
+            "name": "All"
+        },
+        {
+            "id": 0,
+            "name": "Studio"
+        },
+        {
+            "id": 1,
+            "name": "1"
+        },
+        {
+            "id": 2,
+            "name": "2"
+        },
+        {
+            "id": 3,
+            "name": "3"
+        },
+        {
+            "id": 4,
+            "name": "4"
+        },
+        {
+            "id": 5,
+            "name": "5"
+        },
+        {
+            "id": 6,
+            "name": "6+"
+        }
+    ],
+    "Bathrooms": [
+        {
+            "id": "All",
+            "name": "All"
+        },
+        {
+            "id": 1,
+            "name": "1+"
+        },
+        {
+            "id": 2,
+            "name": "2+"
+        },
+        {
+            "id": 3,
+            "name": "3+"
+        },
+        {
+            "id": 4,
+            "name": "4+"
+        },
+        {
+            "id": 5,
+            "name": "5+"
+        },
+        {
+            "id": 6,
+            "name": "6+"
+        }
+    ],
+    "# Of Stories": [
+            {
+                "id": "All",
+                "name": "All"
+            },
+            {
+                "id": 1,
+                "name": "1"
+            },
+            {
+                "id": 2,
+                "name": "2"
+            },
+            {
+                "id": 3,
+                "name": "3"
+            },
+            {
+                "id": 4,
+                "name": "4"
+            },
+            {
+                "id": 5,
+                "name": "5"
+            },
+            {
+                "id": 6,
+                "name": "6"
+            },
+            {
+                "id": 7,
+                "name": "7+"
+            }
+    ],
+    "# Of Units": [
+            {
+                "id": "All",
+                "name": "All"
+            },
+            {
+                "id": 1,
+                "name": "1"
+            },
+            {
+                "id": 2,
+                "name": "2"
+            },
+            {
+                "id": 3,
+                "name": "3"
+            },
+            {
+                "id": 4,
+                "name": "4"
+            },
+            {
+                "id": 5,
+                "name": "5"
+            },
+            {
+                "id": 6,
+                "name": "6"
+            },
+            {
+                "id": 7,
+                "name": "7+"
+            }
+    ],
+    "noteStatus": [
+        {"label":"All","id":5},
+        {"label":"Non-Performing","id":1, "class": "statusNF"},
+        {"label":"Performing","id":2, "class": "statusP"},
+        {"label":"Re-Performing","id":3, "class": "statusSB"},
+        {"label": "Net Lease", "id":4, "class": "statusNL"}
+    ],
+    "Lien Position": [
+        {
+            "name": "All",
+            "id": "All"
+        },
+        {
+            "name": "1st",
+            "id": 1
+        },
+        {
+            "name": "2nd",
+            "id": 2
+        },
+        {
+            "name": "3rd",
+            "id": 3
+        },
+        {
+            "name": "4th",
+            "id": 4
+        }
+    ],
+    "Total SQFT": [
+        {"name":"All","id":"All"},
+        {"name":"Upto 500","id":"Upto 500"},
+        {"name":"Upto 1,000","id":"Upto 1,000"},
+        {"name":"Upto 2,500","id":"Upto 2,500"},
+        {"name":"Upto 5,000","id":"Upto 5,000"},
+        {"name":"Upto 10,000","id":"Upto 10,000"},
+        {"name":"Upto 25,000","id":"Upto 25,000"},
+        {"name":"Upto 50,000","id":"Upto 50,000"},
+        {"name":"50,000+","id":"50,000+"}
+    ],
+    "Lot Area SQFT (Floorplate)":[
+        {"name":"All","id":"All"},
+        {"name":"Upto 500","id":"Upto 500"},
+        {"name":"Upto 1,000","id":"Upto 1,000"},
+        {"name":"Upto 2,500","id":"Upto 2,500"},
+        {"name":"Upto 5,000","id":"Upto 5,000"},
+        {"name":"Upto 10,000","id":"Upto 10,000"},
+        {"name":"Upto 25,000","id":"Upto 25,000"},
+        {"name":"Upto 50,000","id":"Upto 50,000"},
+        {"name":"50,000+","id":"50,000+"}
+    ],
+    "Ideal Square Feet":[
+            {"id": 1, "name": "500 less" },
+            {"id": 2,"name": "500+" },
+            {"id": 3, "name": "1,000+" },
+            {"id": 4, "name": "2,500+" },
+            {"id": 5, "name": "5,000+" },
+            {"id": 6, "name": "10,000+" },
+            {"id": 7, "name": "25,000+" },
+            {"id": 8, "name": "50,000+" },
+            {"id": 9, "name": "100,000+" }
+    ],
+    "Maturity Date": [
+        {
+            "id": "All",
+            "name": "All"
+        },
+        {
+            "id": "2",
+            "name": "30 Days Less"
+        },
+        {
+            "id": "3",
+            "name": "30 Days+"
+        },
+        {
+            "id": "4",
+            "name": "90 Days+"
+        },
+        {
+            "id": "5",
+            "name": "180 Days+"
+        },
+        {
+            "id": "6",
+            "name": "1 Year+"
+        },
+        {
+            "id": "7",
+            "name": "3 Years+"
+        },
+        {
+            "id": "8",
+            "name": "5 Years+"
+        },
+        {
+            "id": "9",
+            "name": "10 Years+"
+        }
+    ],
+    "Interest Rate": [
+            {
+                "id": "All",
+                "name": "All"
+            },
+            {
+                "id": 1,
+                "name": "%1"
+            },
+            {
+                "id": 2,
+                "name": "%2"
+            },
+            {
+                "id": 3,
+                "name": "%3"
+            },
+            {
+                "id": 4,
+                "name": "%4"
+            },
+            {
+                "id": 5,
+                "name": "%5"
+            },
+            {
+                "id": 6,
+                "name": "%6"
+            },
+            {
+                "id": 7,
+                "name": "%7"
+            },
+            {
+                "id": 8,
+                "name": "%8"
+            },
+            {
+                "id": 9,
+                "name": "%9"
+            },
+            {
+                "id": 10,
+                "name": "%10"
+            },
+            {
+                "id": 11,
+                "name": "%11"
+            },
+            {
+                "id": 12,
+                "name": "%12"
+            }
+    ],
+    "Year Built": [
+        {
+            "id": "All",
+            "name": "All"
+        },
+        {
+            "id": "1",
+            "name": "Before 1965"
+        },
+        {
+            "id": "2",
+            "name": "1965+"
+        },
+        {
+            "id": "3",
+            "name": "1975+"
+        },
+        {
+            "id": "4",
+            "name": "1985+"
+        },
+        {
+            "id": "5",
+            "name": "1995+"
+        },
+        {
+            "id": "6",
+            "name": "2005+"
+        },
+        {
+            "id": "7",
+            "name": "2015+"
+        }
+    ],
+    "Occupancy": [
+        {
+            "name": "All",
+            "id": "All"
+        },
+        {
+            "name": "Delivered Vacant",
+            "id": 1
+        },
+        {
+            "name": "Owner Occupied",
+            "id": 2
+        },
+        {
+            "name": "Tenant Occupied",
+            "id": 3
+        },
+        {
+            "id": 4, 
+            "name": "Vacant"
+        },
+        {
+            "name": "Unknown",
+            "id": 5
+        }
+    ],
+    "occupancyMapping" : [
+        {"1" : "Delivered Vacant"},
+        {"2" : "Owner Occupied"},
+        {"3" : "Tenant Occupied"},
+        {"4" : "Vacant"},
+        {"5" : "Unknown"},
+        {"All" : "All"}
+    ],
+    "filter_States":[
+        {   
+            "name":"NJ - New Jersey",
+            "counties":[
+                {
+                    "name":"All Counties",
+                    "cities":[]
+                },
+                {
+                    "name": "Bergen",
+                    "id":5,
+                    "cities": [{"name":"Allendale","id":45},{"name":"Alpine","id":46},{"name":"Bergenfield","id":47},{"name":"Bogota","id":48},{"name":"Carlstadt","id":49},{"name":"Cliffside Park","id":50},{"name":"Closter","id":51},{"name":"Cresskill","id":52},{"name":"Demarest","id":53},{"name":"Dumont","id":54},{"name":"East Rutherford","id":55},{"name":"Edgewater","id":56},{"name":"Elmwood Park","id":57},{"name":"Emerson","id":58},{"name":"Englewood","id":59},{"name":"Englewood Cliffs","id":60},{"name":"Fair Lawn","id":61},{"name":"Fairview","id":62},{"name":"Fort Lee","id":63},{"name":"Franklin Lakes","id":64},{"name":"Garfield","id":65},{"name":"Glen Rock","id":66},{"name":"Hackensack","id":67},{"name":"Harrington Park","id":68},{"name":"Hasbrouck Heights","id":69},{"name":"Haworth","id":70},{"name":"Hillsdale","id":71},{"name":"Ho Ho Kus","id":72},{"name":"Leonia","id":73},{"name":"Little Ferry","id":74},{"name":"Lodi","id":75},{"name":"Lyndhurst","id":76},{"name":"Mahwah","id":77},{"name":"Maywood","id":78},{"name":"Midland Park","id":79},{"name":"Montvale","id":80},{"name":"Moonachie","id":81},{"name":"New Milford","id":82},{"name":"North Arlington","id":83},{"name":"Northvale","id":84},{"name":"Norwood","id":85},{"name":"Oakland","id":86},{"name":"Oradell","id":87},{"name":"Palisades Park","id":88},{"name":"Paramus","id":89},{"name":"Park Ridge","id":90},{"name":"Ramsey","id":91},{"name":"Ridgefield","id":92},{"name":"Ridgefield Park","id":93},{"name":"Ridgewood","id":94},{"name":"River Edge","id":95},{"name":"Rochelle Park","id":96},{"name":"Rutherford","id":97},{"name":"Saddle Brook","id":98},{"name":"Saddle River","id":99},{"name":"South Hackensack","id":100},{"name":"Teaneck","id":101},{"name":"Tenafly","id":102},{"name":"Teterboro","id":103},{"name":"Township Of Washington","id":104},{"name":"Waldwick","id":105},{"name":"Wallington","id":106},{"name":"Westwood","id":107},{"name":"Wood Ridge","id":108},{"name":"Woodcliff Lake","id":109},{"name":"Wyckoff","id":110}]
+                },
+                {
+                    "name": "Essex",
+                    "id":6,
+                    "cities": [{"name":"Belleville","id":111},{"name":"Bloomfield","id":112},{"name":"Caldwell","id":113},{"name":"East Orange","id":114},{"name":"Essex Fells","id":115},{"name":"Fairfield","id":116},{"name":"Glen Ridge","id":117},{"name":"Irvington","id":118},{"name":"Livingston","id":119},{"name":"Maplewood","id":120},{"name":"Millburn","id":121},{"name":"Montclair","id":122},{"name":"Newark","id":123},{"name":"Nutley","id":124},{"name":"Orange","id":125},{"name":"Roseland","id":126},{"name":"Short Hills","id":127},{"name":"South Orange","id":128},{"name":"Verona","id":129},{"name":"West Orange","id":130}]
+                },
+                {
+                    "name": "Hudson (Jersey City)",
+                    "id":7,
+                    "cities": [{"name":"Bayonne","id":131},{"name":"Harrison","id":132},{"name":"Hoboken","id":133},{"name":"Jersey City","id":134},{"name":"Kearny","id":135},{"name":"North Bergen","id":136},{"name":"Secaucus","id":137},{"name":"Union City","id":138},{"name":"Weehawken","id":139},{"name":"West New York","id":140}]
+                },
+                {
+                    "name": "Middlesex",
+                    "id":8,
+                    "cities": [{"name":"Avenel","id":141},{"name":"Carteret","id":142},{"name":"Colonia","id":143},{"name":"Cranbury","id":144},{"name":"Dayton","id":145},{"name":"Dunellen","id":146},{"name":"East Brunswick","id":147},{"name":"Edison","id":148},{"name":"Fords","id":149},{"name":"Helmetta","id":150},{"name":"Highland Park","id":151},{"name":"Iselin","id":152},{"name":"Keasbey","id":153},{"name":"Kendall Park","id":154},{"name":"Metuchen","id":155},{"name":"Middlesex","id":156},{"name":"Milltown","id":157},{"name":"Monmouth Junction","id":158},{"name":"Monroe","id":159},{"name":"New Brunswick","id":160},{"name":"North Brunswick","id":161},{"name":"Old Bridge","id":162},{"name":"Parlin","id":163},{"name":"Perth Amboy","id":164},{"name":"Piscataway","id":165},{"name":"Plainsboro","id":166},{"name":"Port Reading","id":167},{"name":"Sayreville","id":168},{"name":"Sewaren","id":169},{"name":"South Amboy","id":170},{"name":"South Plainfield","id":171},{"name":"South River","id":172},{"name":"Spotswood","id":173},{"name":"Woodbridge","id":174}]
+                },
+                {
+                    "name": "Union",
+                    "id":9,
+                    "cities": [{"name":"Berkeley Heights","id":175},{"name":"Clark","id":176},{"name":"Cranford","id":177},{"name":"Elizabeth","id":178},{"name":"Fanwood","id":179},{"name":"Garwood","id":180},{"name":"Hillside","id":181},{"name":"Kenilworth","id":182},{"name":"Linden","id":183},{"name":"Mountainside","id":184},{"name":"New Providence","id":185},{"name":"Plainfield","id":186},{"name":"Rahway","id":187},{"name":"Roselle","id":188},{"name":"Roselle Park","id":189},{"name":"Scotch Plains","id":190},{"name":"Springfield","id":191},{"name":"Springfield","id":192},{"name":"Union","id":193},{"name":"Vauxhall","id":194},{"name":"Westfield","id":195}]
+                }
+            ]
+        },
+        {
+            "name": "NY - New York",
+            "counties": [
+                {
+                    "name": "All Counties",
+                    "cities": []
+                },
+                {
+                    "name": "Bronx (Bronx)",
+                    "id":10,
+                    "cities": [{"name":"Bronx","id":196}],
+                    "neighbourhood":["Bedford Park", "Claremont", "Concourse", "East Tremont|Belmont", "Edenwald", "Hunts Point", "Mott Haven", "Pelham Bay|Throgs Neck", "Pelham Parkway", "Riverdale", "Soundview", "University Heights"],
+                    "territories":["CB7","CB3","CB4", "CB6", "CB12","CB2","CB1","CB10","CB11","CB8","CB9", "CB5"]
+                },
+                {
+                    "name": "Kings (Brooklyn)",
+                    "id":11,
+                    "cities": [{"name":"Brooklyn","id":197}],
+                    "neighbourhood":["Bay Ridge", "Bedford-Stuyvesant", "Bensonhurst", "Bath Beach", "Boerum Hill", "Borough Park", "Brighton Beach", "Brooklyn College", "Brooklyn Heights", "Brooklyn Navy Yard", "Brower Park", "Brownsville", "Bushwick", "Canarsie", "Carroll Gardens", "Clinton Hill", "Cobble Hill", "Columbia Heights", "Coney Island", "Crown Heights", "Cypress Hills", "Ditmas Park", "Downtown Brooklyn", "DUMBO", "Dyker Heights", "East Flatbush", "East New York", "Flatbush", "Flatlands", "Fort Greene", "Fort Hamilton", "Gowanus", "Gravesend", "Greenpoint", "Greenwood ", "Homecrest", "Industry City|Bush Terminal", "Jamaica Bay", "Kensington", "Kings Highway", "Kings Plaza", "Madison", "Manhattan Beach", "Marine Park", "Midwood", "Mill Basin", "Park Slope|Prospect Park", "Park Slope", "Parkville", "Prospect Heights", "Prospect Lefferts Gardens", "Prospect Park South", "Red Hook", "Sea Gate", "Sheepshead Bay", "Starrett City", "Stuyvesant Heights", "Sunset Park", "Vanderveer", "Vinegar Hill", "Weeksville", "Williamsburg", "Windsor Terrace"],
+                    "territories":["CB10", "CB3", "CB11", "CB2", "CB12", "CB13", "CB14", "CB9", "CB16", "CB4", "CB18", "CB6", "CB8", "CB5", "CB17", "CB1", "CB7", "CB15"]
+                },
+                {
+                    "name": "Nassau",
+                    "id":12,
+                    "cities": [{"name":"Albertson","id":198},{"name":"Alden Manor","id":199},{"name":"Allenwood","id":200},{"name":"Argo Village","id":201},{"name":"Atlantic Beach","id":202},{"name":"Baldwin","id":203},{"name":"Baldwin Harbor","id":204},{"name":"Bar Harbor","id":205},{"name":"Barnum Island","id":206},{"name":"Baxter Estates","id":207},{"name":"Bayville","id":208},{"name":"Bellerose Terrace","id":209},{"name":"Bellerose Village","id":210},{"name":"Bellmore","id":211},{"name":"Bethpage","id":212},{"name":"Briar Park","id":213},{"name":"Brookville","id":214},{"name":"Carle Place","id":215},{"name":"Cedarhurst","id":216},{"name":"Centre Island","id":217},{"name":"Cove Neck","id":218},{"name":"East Atlantic Beach","id":219},{"name":"East Farmingdale","id":220},{"name":"East Hills","id":221},{"name":"East Massapequa","id":222},{"name":"East Meadow","id":223},{"name":"East Norwich","id":224},{"name":"East Rockaway","id":225},{"name":"East Williston","id":226},{"name":"Elmont","id":227},{"name":"Farmingdale","id":228},{"name":"Franklin Square","id":229},{"name":"Freeport","id":230},{"name":"Garden City","id":231},{"name":"Garden City Park","id":232},{"name":"Garden City South","id":233},{"name":"Glen Cove","id":234},{"name":"Glen Head","id":235},{"name":"Glenwood Landing","id":236},{"name":"Great Neck","id":237},{"name":"Great Neck Estates","id":238},{"name":"Greenvale","id":239},{"name":"Harbor Acres","id":240},{"name":"Harbor Hills","id":241},{"name":"Harbor Isle","id":242},{"name":"Hempstead","id":243},{"name":"Herricks","id":244},{"name":"Hewlett","id":245},{"name":"Hewlett Bay","id":246},{"name":"Hewlett Bay Park","id":247},{"name":"Hewlett Harbor","id":248},{"name":"Hewlett Neck","id":249},{"name":"Hicksville","id":250},{"name":"Inwood","id":251},{"name":"Island Park","id":252},{"name":"Island Trees","id":253},{"name":"Jericho","id":254},{"name":"Kenilworth","id":255},{"name":"Kensington","id":256},{"name":"Kings Point","id":257},{"name":"Lake Gardens","id":258},{"name":"Lake Success","id":259},{"name":"Lakeview","id":260},{"name":"Lakeville Estates","id":261},{"name":"Lattingtown","id":262},{"name":"Laurel Hollow","id":263},{"name":"Lawrence","id":264},{"name":"Levittown","id":265},{"name":"Lido Beach","id":266},{"name":"Locust Valley","id":267},{"name":"Locustwood","id":268},{"name":"Long Beach","id":269},{"name":"Lynbrook","id":270},{"name":"Malverne","id":271},{"name":"Manhasset","id":272},{"name":"Manhasset Hills","id":273},{"name":"Manorhaven","id":274},{"name":"Massapequa","id":275},{"name":"Massapequa Park","id":276},{"name":"Matinecock","id":277},{"name":"Meacham","id":278},{"name":"Meadowmere Park","id":279},{"name":"Merrick","id":280},{"name":"Mill Neck","id":281},{"name":"Mineola","id":282},{"name":"Mitchell Field","id":283},{"name":"Muttontown","id":284},{"name":"New Cassel","id":285},{"name":"New Hyde Park","id":286},{"name":"North Baldwin","id":287},{"name":"North Bellmore","id":288},{"name":"North Hills","id":289},{"name":"North Massapequa","id":290},{"name":"North Merrick","id":291},{"name":"North New Hyde Park","id":292},{"name":"North Valley Stream","id":293},{"name":"North Wantagh","id":294},{"name":"North Woodmere","id":295},{"name":"Oceanside","id":296},{"name":"Old Bethpage","id":297},{"name":"Old Brookville","id":298},{"name":"Old Westbury","id":299},{"name":"Oyster Bay","id":300},{"name":"Oyster Bay Cove","id":301},{"name":"Plainedge","id":302},{"name":"Plainview","id":303},{"name":"Plandome","id":304},{"name":"Point Lookout","id":305},{"name":"Port Washington","id":306},{"name":"Rockville Centre","id":307},{"name":"Roosevelt","id":308},{"name":"Roosevelt Field","id":309},{"name":"Roslyn","id":310},{"name":"Roslyn Harbor","id":311},{"name":"Roslyn Heights","id":312},{"name":"Russell Gardens","id":313},{"name":"Saddle Rock","id":314},{"name":"Saddle Rock Estates","id":315},{"name":"Sands Point","id":316},{"name":"Sea Cliff","id":317},{"name":"Seaford","id":318},{"name":"South Farmingdale","id":319},{"name":"South Floral Park","id":320},{"name":"South Hempstead","id":321},{"name":"Stewart Manor","id":322},{"name":"Strathmore","id":323},{"name":"Sutton Park","id":324},{"name":"Syosset","id":325},{"name":"The Terrace","id":326},{"name":"Thomaston","id":327},{"name":"Uniondale","id":328},{"name":"University Gardens","id":329},{"name":"Upper Brookville","id":330},{"name":"Valley Stream","id":331},{"name":"Wantagh","id":332},{"name":"West Hempstead","id":333},{"name":"Westbury","id":334},{"name":"Williston Park","id":335},{"name":"Woodbury","id":336},{"name":"Woodmere","id":337},{"name":"Woodsburgh","id":338}],
+                    "neighbourhood":[],
+                    "territories":[]
+                },
+                {
+                    "name": "New York (Manhattan)",
+                    "id":13,
+                    "cities": [{"name":"New York", "id":339}],
+                    "neighbourhood":["Battery Park City", "Chelsea|West Village", "Chelsea|West Midtown", "East Harlem|Carnegie Hill", "East Village", "Financial District", "Financial District|Seaport", "Financial District|Battery Park City", "Gramercy|Flatiron", "Greenwich Village|Union Square|Gramercy|Flatiron", "Hamilton Heights|Sugar Hill", "Harlem", "Inwood", "Lower East Side", "Manhattan Valley|Morningside Heights|Harlem", "Midtown East", "Midtown West", "Mt. Morris Park|Morningside Heights", "Murray Hill|Kips Bay", "Tribeca|Financial District", "Tribeca|Soho", "Upper East Side", "Upper West Side", "Greenwich Village|NoHo|Soho", "Washington Heights", "Washington Hts|Hudson Hts", "West Village|Soho"],
+                    "territories":["CB1", "CB4", "CB11", "CB3", "CB6", "CB9", "CB10", "CB12", "CB7", "CB5", "CB2", "CB8"]
+                },
+                {
+                    "name": "Queens (Queens)",
+                    "cities": [{"name":"Queens", "id":340}],
+                    "id":14,
+                    "neighbourhood":["Arverne", "Astoria Heights", "Astoria ", "Auburndale", "Bay Terrace", "Bayside", "Bayswater", "Beechhurst ", "Bellaire ", "Belle Harbor ", "Bellerose ", "Blissville ", "Breezy Point", "Briarwood ", "Broad Channel ", "Cambria Heights ", "College Point ", "Corona", "Ditmars ", "Douglaston", "Dutch Kills ", "East Elmhurst ", "Edgemere ", "Elmhurst ", "Far Rockaway ", "Floral Park ", "Flushing", "Forest Hills ", "Fresh Meadows ", "Fresh Pond ", "Glen Oaks ", "Glendale ", "Hammels ", "Hillcrest ", "Hollis Hills", "Hollis ", "Holliswood ", "Howard Beach ", "Hunters Point ", "Jackson Heights ", "Jamaica", "Jamaica Estates ", "Kew Gardens Hills", "Kew Gardens", "Laurelton ", "LeFrak City ", "Linden Hill ", "Lindenwood ", "Long Island City", "Little Neck", "Malba ", "Maspeth ", "Meadowmere ", "Middle Village ", "Murray Hill ", "Neponsit ", "New Hyde Park ", "North Shore Towers", "Oakland Gardens ", "Ozone Park ", "Pomonok", "Queens Village", "Queensboro Hill", "Queensbridge ", "Ravenswood ", "Rego Park ", "Richmond Hill", "Ridgewood", "Rochdale Village", "Rockaway Beach ", "Rockaway Park", "Rosedale", "Roxbury ", "Saint Albans", "South Jamaica ", "South Ozone Park ", "Springfield Gardens ", "Sunnyside", "Tudor Village ", "Whitestone", "Willets Point ", "Woodhaven ", "Woodside"],
+                    "territories":["CB14", "CB1", "CB11", "CB7", "CB13", "CB2", "CB8", "CB4", "CB3", "CB6", "CB5", "CB12", "CB10", "CB9"]
+                },
+                {
+                    "name": "Richmond (Staten Island)",
+                    "id":15,
+                    "cities": [{"name":"Staten Island", "id":341}],
+                    "neighbourhood":["Mid-lsland", "Port Richmond", "South Shore", "Stapleton|St. George"],
+                    "territories":["CB1", "CB2", "CB3"]
+                },
+                {
+                    "name": "Suffolk (Hamptons)",
+                    "id":16,
+                    "cities": [],
+                    "neighbourhood":[{"name":"Amagansett","id":342},{"name":"Amity Harbor","id":343},{"name":"Amityville","id":344},{"name":"Aquebogue","id":345},{"name":"Asharoken","id":346},{"name":"Babylon","id":347},{"name":"Baiting Hollow","id":348},{"name":"Bay Hills","id":349},{"name":"Bay Point","id":350},{"name":"Bay Shore","id":351},{"name":"Bayberry Point","id":352},{"name":"Baycrest","id":353},{"name":"Bayport","id":354},{"name":"Beach Hampton","id":355},{"name":"Beech Croft","id":356},{"name":"Belle Terre","id":357},{"name":"Bellport","id":358},{"name":"Blue Point","id":359},{"name":"Bohemia","id":360},{"name":"Box Hill","id":361},{"name":"Brentwood","id":362},{"name":"Bridgehampton","id":363},{"name":"Brightwaters","id":364},{"name":"Brookhaven","id":365},{"name":"Calverton","id":366},{"name":"Canaan Lake","id":367},{"name":"Captree Island","id":368},{"name":"Carver Park","id":369},{"name":"Center Moriches","id":370},{"name":"Centereach","id":371},{"name":"Centerport","id":372},{"name":"Central Islip","id":373},{"name":"Cherry Grove","id":374},{"name":"Cold Spring Harbor","id":375},{"name":"Cold Spring Hills","id":376},{"name":"Commack","id":377},{"name":"Copiague","id":378},{"name":"Coram","id":379},{"name":"Corneil Estates","id":380},{"name":"Crab Meadow","id":381},{"name":"Cutchogue","id":382},{"name":"Davis Park","id":383},{"name":"Deer Park","id":384},{"name":"Deer Wells","id":385},{"name":"Dix Hills","id":386},{"name":"East Hampton","id":387},{"name":"East Islip","id":388},{"name":"East Marion","id":389},{"name":"East Moriches","id":390},{"name":"East Northport","id":391},{"name":"East Patchogue","id":392},{"name":"East Quogue","id":393},{"name":"East Setauket","id":394},{"name":"East Yaphank","id":395},{"name":"Eastport","id":396},{"name":"Eatons Neck","id":397},{"name":"Edgewood","id":398},{"name":"Elwood","id":399},{"name":"Fair Harbor","id":400},{"name":"Farmingville","id":401},{"name":"Fire Island","id":402},{"name":"Fire Island Pines","id":403},{"name":"Fishers Island","id":404},{"name":"Flanders","id":405},{"name":"Flowerfield","id":406},{"name":"Fort Salonga","id":407},{"name":"Gilgo Beach","id":408},{"name":"Gordon Heights","id":409},{"name":"Great River","id":410},{"name":"Greenlawn","id":411},{"name":"Greenport","id":412},{"name":"Halesite","id":413},{"name":"Hampton Bays","id":414},{"name":"Harbor Heights","id":415},{"name":"Hauppauge","id":416},{"name":"Head of the Harbor","id":417},{"name":"Heer Park","id":418},{"name":"Hither Plains","id":419},{"name":"Holbrook","id":420},{"name":"Holtsville","id":421},{"name":"Huntington","id":422},{"name":"Huntington Bay","id":423},{"name":"Huntington Station","id":424},{"name":"Islandia","id":425},{"name":"Islip","id":426},{"name":"Islip Manor","id":427},{"name":"Islip Terrace","id":428},{"name":"Jamesport","id":429},{"name":"Kings Park","id":430},{"name":"Kismet","id":431},{"name":"Knollwood Beach","id":432},{"name":"Lake Grove","id":433},{"name":"Lake Panamoka","id":434},{"name":"Lake Ronkonkoma","id":435},{"name":"Laurel","id":436},{"name":"Lindenhurst","id":437},{"name":"Lloyd Harbor","id":438},{"name":"Lloyd Neck","id":439},{"name":"Manor Park","id":440},{"name":"Manorville","id":441},{"name":"Marconiville","id":442},{"name":"Mastic","id":443},{"name":"Mastic Beach","id":444},{"name":"Mattituck","id":445},{"name":"Medford","id":446},{"name":"Melville","id":447},{"name":"Mid Island","id":448},{"name":"Middle Island","id":449},{"name":"Miller Place","id":450},{"name":"Montauk","id":451},{"name":"Moriches","id":452},{"name":"Mount Sinai","id":453},{"name":"Nassau Point","id":454},{"name":"Nesconset","id":455},{"name":"New Suffolk","id":456},{"name":"Nissequogue","id":457},{"name":"North Amityville","id":458},{"name":"North Babylon","id":459},{"name":"North Bay Shore","id":460},{"name":"North Bellport","id":461},{"name":"North Haven","id":462},{"name":"North Lindenhurst","id":463},{"name":"North Patchogue","id":464},{"name":"North Sea","id":465},{"name":"Northampton","id":466},{"name":"Northport","id":467},{"name":"Oak Beach","id":468},{"name":"Oak Island","id":469},{"name":"Oakdale","id":470},{"name":"Ocean Bay Park","id":471},{"name":"Ocean Beach","id":472},{"name":"Old Field","id":473},{"name":"Old Mastic","id":474},{"name":"Old Westfield","id":475},{"name":"Orient","id":476},{"name":"Orient Point","id":477},{"name":"Panamoka","id":478},{"name":"Patchogue","id":479},{"name":"Peconic","id":480},{"name":"Pine Air","id":481},{"name":"Pine Neck","id":482},{"name":"Point O Woods","id":483},{"name":"Poquott","id":484},{"name":"Port Jefferson","id":485},{"name":"Port Jefferson Station","id":486},{"name":"Promised Land","id":487},{"name":"Quioque","id":488},{"name":"Quogue","id":489},{"name":"Remsenburg","id":490},{"name":"Ridge","id":491},{"name":"Riverhead","id":492},{"name":"Rivers Edge","id":493},{"name":"Rocky Point","id":494},{"name":"Ronkonkoma","id":495},{"name":"Sag Harbor","id":496},{"name":"Sagaponack","id":497},{"name":"Saint James","id":498},{"name":"Saltaire","id":499},{"name":"San Remo","id":500},{"name":"Sayville","id":501},{"name":"Scotts Beach","id":502},{"name":"Seaview","id":503},{"name":"Selden","id":504},{"name":"Setauket","id":505},{"name":"Shelter Island","id":506},{"name":"Shelter Island Heights","id":507},{"name":"Shirley","id":508},{"name":"Shoreham","id":509},{"name":"Smithtown","id":510},{"name":"Sound Beach","id":511},{"name":"South Hauppauge","id":512},{"name":"South Haven","id":513},{"name":"South Huntington","id":514},{"name":"South Jamesport","id":515},{"name":"South Setauket","id":516},{"name":"Southampton","id":517},{"name":"Southold","id":518},{"name":"Speonk","id":519},{"name":"Stony Brook","id":520},{"name":"Strongs Neck","id":521},{"name":"Sunken Meadow","id":522},{"name":"Terryville","id":523},{"name":"Upton","id":524},{"name":"Wading River","id":525},{"name":"Wainscott","id":526},{"name":"Water Mill","id":527},{"name":"West Babylon","id":528},{"name":"West Bay Shore","id":529},{"name":"West Brentwood","id":530},{"name":"West Gilgo Beach","id":531},{"name":"West Hills","id":532},{"name":"West Islip","id":533},{"name":"West Sayville","id":534},{"name":"Westhampton","id":535},{"name":"Westhampton Beach","id":536},{"name":"Westhampton Dunes","id":537},{"name":"Wheatley Heights","id":538},{"name":"Wildwood","id":539},{"name":"Wincoma","id":540},{"name":"Wyandanch","id":541},{"name":"Yaphank","id":542}],
+                    "territories":[]
+                },
+                {
+                    "name": "Westchester",
+                    "id":17,
+                    "cities": [{"name":"Amawalk","id":543},{"name":"Ardsley","id":544},{"name":"Ardsley-on-Hudson","id":545},{"name":"Armonk","id":546},{"name":"Baldwin Place","id":547},{"name":"Bedford","id":548},{"name":"Bedford Hills","id":549},{"name":"Brewster","id":550},{"name":"Briarcliff Manor","id":551},{"name":"Buchanan","id":552},{"name":"Chappaqua","id":553},{"name":"Crompond","id":554},{"name":"Cross River","id":555},{"name":"Croton Falls","id":556},{"name":"Croton-on-Hudson","id":557},{"name":"Dobbs Ferry","id":558},{"name":"Elmsford","id":559},{"name":"Goldens Bridge","id":560},{"name":"Granite Springs","id":561},{"name":"Harrison","id":562},{"name":"Hartsdale","id":563},{"name":"Hawthorne","id":564},{"name":"Irvington","id":565},{"name":"Jefferson Valley","id":566},{"name":"Katonah","id":567},{"name":"Lake Peekskill","id":568},{"name":"Larchmont","id":569},{"name":"Lincolndale","id":570},{"name":"Mahopac","id":571},{"name":"Mamaroneck","id":572},{"name":"Maryknoll","id":573},{"name":"Millwood","id":574},{"name":"Mohegan Lake","id":575},{"name":"Montrose","id":576},{"name":"Mount Kisco|Bedford Corners","id":577},{"name":"Mount Vernon","id":578},{"name":"North Salem","id":579},{"name":"Ossining","id":580},{"name":"Peekskill","id":581},{"name":"Cortlandt Manor","id":582},{"name":"Pleasantville","id":583},{"name":"Port Chester|Rye Brook","id":584},{"name":"Pound Ridge","id":585},{"name":"Purchase","id":586},{"name":"Purdys","id":587},{"name":"Rye","id":588},{"name":"Scarsdale|Heathcote","id":589},{"name":"Shrub Oak","id":590},{"name":"Somers","id":591},{"name":"South Salem","id":592},{"name":"Tarrytown|Sleepy Hollow","id":593},{"name":"Thornwood","id":594},{"name":"Valhalla","id":595},{"name":"Verplanck","id":596},{"name":"Waccabuc","id":597},{"name":"Yorktown Heights","id":598},{"name":"White Plains","id":599},{"name":"White Plains|N White Plains","id":600},{"name":"West Harrison|White Plains","id":601},{"name":"Yonkers","id":602},{"name":"Hastings-on-Hudson","id":603},{"name":"Tuckahoe","id":604},{"name":"Bronxville","id":605},{"name":"Eastchester","id":606},{"name":"New Rochelle","id":607},{"name":"Pelham","id":608},{"name":"New Rochelle|Wykagyl","id":609}],
+                    "neighbourhood":[],
+                    "territories":[]
+                }
+            ]
+        },
+        {   
+            "name":"FL - Florida",
+            "counties":[
+                {
+                    "name":"All Counties",
+                    "cities":[]
+                },
+                {
+                    "name": "Broward (Ft. Lauderdale)",
+                    "id":1,
+                    "cities": [{"name":"Dania","id":1},{"name":"Deerfield Beach","id":2},{"name":"Fort Lauderdale","id":3},{"name":"Hallandale","id":4},{"name":"Hollywood","id":5},{"name":"Pembroke Pines","id":6},{"name":"Pompano Beach","id":7}]
+                },
+                {
+                    "name":"Miami-Dade",
+                    "id":2,
+                    "cities":[{"name":"Hialeah","id":8},{"name":"Homestead","id":9},{"name":"Key Biscayne","id":10},{"name":"Miami","id":11},{"name":"Miami Beach","id":12},{"name":"North Miami Beach","id":13},{"name":"Opa Locka","id":14}]
+                },
+                {
+                    "name":"Orange (Orlando)",
+                    "id":3,
+                    "cities":[{"name":"Apopka","id":15},{"name":"Christmas","id":16},{"name":"Clarcona","id":17},{"name":"Gotha","id":18},{"name":"Killarney","id":19},{"name":"Maitland","id":20},{"name":"Oakland","id":21},{"name":"Ocoee","id":22},{"name":"Orlando","id":23},{"name":"Plymouth","id":24},{"name":"Tangerine","id":25},{"name":"Windermere","id":26},{"name":"Winter Garden","id":27},{"name":"Winter Park","id":28},{"name":"Zellwood","id":29}]
+                },
+                {
+                    "name":"Palm Beach",
+                    "id":4,
+                    "cities":[{"name":"West Palm Beach","id":30},{"name":"North Palm Beach","id":31},{"name":"Boynton Beach","id":32},{"name":"Boca Raton","id":33},{"name":"Belle Glade","id":34},{"name":"Canal Point","id":35},{"name":"Bryant","id":36},{"name":"Delray Beach","id":37},{"name":"Lake Worth","id":38},{"name":"Jupiter","id":39},{"name":"Lake Harbor","id":40},{"name":"Loxahatchee","id":41},{"name":"Pahokee","id":42},{"name":"Palm Beach","id":43},{"name":"South Bay","id":44}]
+                }
+            ]
+        }
+        
+    ],
+    "Filter Price Range":[{"id": 1,"name": "$100K less"},{"id": 2,"name": "$100K+" }, {"id": 3,"name": "$250K+" }, {"id": 4,"name": "$500K+" }, {"id": 5,"name": "$1M+" }, {"id": 6,"name": "$3M+" }, {"id": 7,"name": "$5M+" }, {"id": 8,"name": "$7M+" }, {"id": 9,"name": "$10M+" }, {"id": 10,"name": "$15M+" }, {"id": 11,"name": "$30M+" }, {"id": 12,"name": "$50M+" }],
+    "Filter_#_Of_Stories":[{"id": 0, "name": "0"}, {"id": 1, "name": "1"}, {"id": 2, "name": "2+"}, {"id": 3, "name": "5+"}, {"id": 4, "name": "10+"}, {"id": 5, "name": "20+"}, {"id": 6, "name": "50+"}],
+    "Filter_Units":[{ "id": 0, "name": "0"}, { "id": 1, "name": "1"  }, { "id": 2, "name": "2+"  }, { "id": 3, "name": "5+"  }, { "id": 4, "name": "10+" }, { "id": 5, "name": "20+"  }, { "id": 6, "name": "50+"  } ],
+    "Filter_Interest_Rate":[{ "id": 1, "name": "3% less" }, { "id": 2, "name": "3%+" }, { "id": 3, "name": "5%+" }, { "id": 4, "name": "10%+" }, { "id": 5, "name": "15%+" }, { "id": 6, "name": "20%+" }, { "id": 7, "name": "25%+" }],
+    "Filter_Loan_Status": [ {"id": 1,"name": "Non-Performing"}, {"id": 2,"name": "Performing"}, {"id": 3,"name": "Re-Performing"}, {"id": 4,"name": "Net Lease"}],
+    "Filter_Lien_Position":[{"id":1,"name":"1st"},{"id":2,"name":"2nd"},{"id":3,"name":"3rd"},{"id":4,"name":"Other"}],
+    "License_Type":[{
+        "label": "Brokers",
+        "value": "Brokers"
+        
+    },
+    {
+        "label": "Salespersons",
+        "value": "Salespersons"
+        
+    }],
+    "Department_Name":[{
+        "label": "Sales",
+        "value": "Sales"
+        
+    },
+    {
+        "label": "Marketing",
+        "value": "Marketing"
+        
+    },
+    {
+        "label": "Operations",
+        "value": "Operations"
+        
+    },
+    {
+        "label": "FInance",
+        "value": "FInance"
+        
+    },
+    {
+        "label": "HR",
+        "value": "HR"
+        
+    },
+    {
+        "label": "Technology",
+        "value": "Technology"
+        
+    },
+    {
+        "label": "Executive Office",
+        "value": "Executive Office"
+        
+    }],
+    "Product_Types": [
+        {
+            "label": "Mortgage Note",
+            "value": "Mortgage Note"
+        },
+        {
+            "label": "Real Estate",
+            "value": "Real Estate"
+        },
+        {
+            "label": "Both",
+            "value": "Both"
+        },
+        {
+            "label": "None",
+            "value": "None"
+        }
+    ],
+    "Asset_Types": [
+        {
+            "label": "Commercial",
+            "value": "Commercial"
+        },
+        {
+            "label": "Residential",
+            "value": "Residential"
+        },
+        {
+            "label": "Both",
+            "value": "Both"
+        },
+        {
+            "label": "None",
+            "value": "None"
+        }
+    ],
+    "direct_pay": [
+        {
+            "label": "No",
+            "value": "0",
+            "id":"0"
+        },
+        {
+            "label": "Yes",
+            "value": "1",
+            "id":"2"
+        }
+    ],
+    "Same_As_Home_Address": [
+        {
+            "label": "No",
+            "value": "0",
+            "id":"0"
+        },
+        {
+            "label": "Yes",
+            "value": "1",
+            "id":"2"
+        }
+    ],
+    
+    "propertyTypeMapping": {
+        "Farm": "Farm",
+        "Hotel": "Hotel",
+        "Industrial": "Industrial",
+        "Land": "Land",
+        "Medical": "Medical",
+        "Mixed-Use": "Mixed-Use",
+        "Multifamily (5 Units+)": "Multifamily",
+        "Office": "Office",
+        "Retail": "Retail",
+        "Retail (NL)": "Retail",
+        "Self-Storage": "Storage",
+        "Self-Storage (NL)": "Storage",
+        "Senior Living (NL)": "Senior",
+        "Senior-Living": "Senior",
+        "Brownstone": "Brownstone",
+        "Condo": "Condo",
+        "Co-op": "Co-op",
+        "House (Single-family)": "House",
+        "Mobile Home": "Mobile",
+        "Multifamily (4 Units or less)": " Multifamily",
+        "Townhouse": "Townhouse",
+        "Other": "Other"
+    }   
+}

@@ -1,0 +1,339 @@
+import React, { Fragment } from "react";
+import { withStyles } from '@material-ui/core/styles';
+import { Grid, InputLabel, OutlinedInput, FormControl, Select, MenuItem, Typography, Hidden, ExpansionPanel, ExpansionPanelDetails, ExpansionPanelSummary } from '@material-ui/core';
+import customInputStyle from "../../assets/jss/material-kit-react/components/customInputStyle.jsx";
+import onBoardingStyle from "./onBoardingStyle";
+import { staticData } from "../../common";
+import MaskedInput from 'react-text-mask';
+import Button from "../uiComponent/CustomButtons/Button";
+
+function TextMaskCustom(props) {
+    const { inputRef, ...other } = props;
+
+    return (
+        <MaskedInput
+            {...other}
+            ref={inputRef}
+            mask={['(', /[1-9]/, /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/]}
+            placeholderChar={'\u2000'}
+        />
+    );
+}
+
+/* eslint no-unused-vars: "off" */
+function creditCardInputMask(props) {
+    const { inputRef, ...other } = props;
+
+    return (
+        <MaskedInput
+            {...other}
+            ref={inputRef}
+            mask={[/\d/, /\d/, /\d/, /\d/, ' ', /\d/, /\d/, /\d/, /\d/, ' ', /\d/, /\d/, /\d/, /\d/, ' ', /\d/, /\d/, /\d/, /\d/]}
+            placeholderChar={'\u2000'}
+        />
+    );
+}
+
+
+class DirectPay extends React.Component {
+    state = {
+        expanded: "buyerLogin",
+        validPanels: []
+    };
+
+    panels = ["buyerLogin", "buyerInfo", "billingAddress", "paymentInfo"];
+
+    handleChange = panel => (event, expanded) => {
+        this.setState({
+            expanded: expanded ? panel : false,
+        });
+    };
+
+    handleDone = (panel) => {
+        let isPanelValid = this.props.handleDoneClick_buyerInfo(panel);
+        if (isPanelValid) {
+            window.scrollTo({ top: 250, left: 0, behavior: "smooth" });
+
+            let { validPanels } = this.state;
+            if (!validPanels.includes(panel)) {
+                validPanels.push(panel);
+                this.setState({ validPanels });
+            }
+
+            let currentPanelIndex = this.panels.indexOf(panel);
+
+            if (currentPanelIndex === 3) {
+                this.setState({ expanded: null });
+            }
+            else {
+                this.setState({ expanded: this.panels[currentPanelIndex + 1] });
+            }
+
+            if (validPanels.length === this.panels.length) {
+                this.props.setBuyerInfoValidated();
+            }
+        }
+    };
+
+    render() {
+        const { expanded } = this.state;
+        const { classes, handleChange, formData, invalidBuyerFormFields, handleInput, handlButtonToggle, validBuyerFormFields, isMyAccount,
+            loginEdit, buyerInfoEdit, billingAddressEdit, paymentInfoEdit, onClick } = this.props;
+        const getInputClasses = (fieldName) => {
+            return `custom-form-control ${classes.requiredInput} hook-required ${invalidBuyerFormFields.includes(fieldName) ? 'error_class' :
+                formData[fieldName] !== '' && validBuyerFormFields.includes(fieldName) ? 'success_class' : ''}`
+        }
+        const getInputValue = (fieldName) => {
+            if (isMyAccount && formData.buyer && ["job_title", "company_name", "city"].includes(fieldName)) {
+                return formData.buyer[fieldName];
+            }
+            else if (isMyAccount && formData.buyer && ["state"].includes(fieldName)) {
+                return formData.buyer.state_info["code"];
+            }
+            else if (isMyAccount && formData.buyer && ["country"].includes(fieldName)) {
+                return staticData.countries[0].code;
+            } else if (isMyAccount && formData.buyer && ["address"].includes(fieldName)) {
+                return formData.buyer["street1"]
+            } else if (isMyAccount && formData.buyer && ["address_suit"].includes(fieldName)) {
+                return formData.buyer["street2"]
+            }
+            else {
+                return formData[fieldName];
+            }
+        }
+        const year = (new Date()).getFullYear();
+        const years = Array.from(new Array(20), (val, index) => index + year);
+
+        function showDirectPay() {
+            let directPayFields;
+            if (formData["direct-pay"] === 1) {
+                directPayFields =
+                    <Fragment>
+
+                    </Fragment>
+            }
+        }
+
+        return (
+            <div className={[classes.panelMain, classes.directPayWrapper].join(' ')}>
+                {isMyAccount &&
+                    <React.Fragment>
+                        <div className={classes.userInfoStaticTextWrapper}>
+                            <div className={classes.userInfoStaticText}>
+                                <div className={classes.userInfoStaticTextHead}>BUYER</div>
+                                <div className={classes.userInfoStaticTextCont}>{formData["first_name"] + ' ' + formData["last_name"]}</div>
+                            </div>
+                            <div className={classes.userInfoStaticText}>
+                                <div className={classes.userInfoStaticTextHead}>MEMBER ID</div>
+                                <div className={classes.userInfoStaticTextCont}>{formData["id"]}</div>
+                            </div>
+                            <div className={classes.userInfoStaticText}>
+                                <div className={classes.userInfoStaticTextHead}>MEMBER SINCE</div>
+                                <div className={classes.userInfoStaticTextCont}>Jan 19, 2018</div>
+                            </div>
+                        </div>
+                    </React.Fragment>
+                }
+                <div className={classes.adgentPanelTagBar}>
+                    Please input your bank details for direct payment.
+                </div>
+                <Grid className={classes.panelWrapperBox + (isMyAccount ? ' myAccountPanelWrapper' : '')}>
+                    <ExpansionPanel className={classes.expansionPanelAS} expanded={!window.SB_IsMobileView || isMyAccount ? true : expanded === 'buyerInfo'} onChange={this.handleChange('buyerInfo')} >
+                        <ExpansionPanelSummary className={classes.expansionPanelSummaryAS} expandIcon={isMyAccount ? ' ' : <i className={this.state.validPanels.includes("buyerInfo") && expanded !== "buyerInfo" ? "sb-icon-panel-success" : "sb-icon-panel-arrow"}></i>}>
+
+                            <Grid container
+                                direction="row"
+                                justify="space-between"
+                                alignItems="center"
+                                className={isMyAccount ? classes.containerMyaccount : ''}>
+                                <Grid item xs={isMyAccount ? 9 : 12} sm={6} lg={6}>
+                                    <Typography className="form__heading" noWrap>
+                                        BANK INFORMATION
+                                    </Typography>
+                                </Grid>
+                                {isMyAccount ?
+                                    <Grid item xs={isMyAccount ? 3 : 12} sm={6} lg={6} className={isMyAccount ? 'text-right' : ''}>
+                                        <Button name='buyerInfoEdit' onClick={onClick} className={classes.btnMyAccount + (buyerInfoEdit ? " save" : " edit")}>
+                                            {buyerInfoEdit ? "Save" : "Edit"}
+                                        </Button>
+                                    </Grid>
+                                    :
+                                    <Hidden xsDown>
+                                        <Grid item xs={12} sm={6} lg={6}>
+                                            <Typography className="form__sub-heading" color="primary" noWrap>
+                                                Blue fields mandatory.
+                                            </Typography>
+                                        </Grid>
+                                    </Hidden>
+                                }
+
+                            </Grid>
+                        </ExpansionPanelSummary>
+                        <ExpansionPanelDetails className={classes.expansionPanelDetailsAS}>
+                            {!isMyAccount &&
+                                <Hidden smUp>
+                                    <Typography className="form__sub-heading" color="primary" noWrap>
+                                        Blue fields mandatory.
+                                    </Typography>
+                                </Hidden>
+                            }
+                            <div className={classes.fullWidth}>
+                                <Grid container spacing={32} className={"space-reset " + classes.cutomInputGridWrapper}>
+                                    <Grid item xs={12} sm={6} lg={4} className={classes.cutomInputGrid}>
+                                        <FormControl required variant="outlined" fullWidth className={getInputClasses("direct-pay") + ' requiredInput'}>
+                                            <InputLabel htmlFor="direct-pay">Do You Want Direct Pay?</InputLabel>
+                                            <Select value={formData["direct-pay"]} onChange={handleInput} onBlur={handleChange}
+                                                input={<OutlinedInput labelWidth={0} name="direct-pay" id="direct-pay" />}>
+                                                {staticData.direct_pay.map(directPay => (
+                                                    <MenuItem key={directPay.value} value={directPay.value}>
+                                                        {directPay.label}
+                                                    </MenuItem>
+                                                ))}
+                                            </Select>
+                                        </FormControl>
+                                    </Grid>
+                                    <Grid item sm={6} lg={8} className={classes.cutomClearfix}></Grid>
+                                    {formData["direct-pay"] === '1' &&
+                                        <Fragment>
+                                            <Grid item xs={12} sm={6} lg={4} className={classes.cutomInputGrid}>
+                                                <FormControl required variant="outlined" fullWidth className={getInputClasses("field-bank-name") + ' requiredInput'}>
+                                                    <InputLabel htmlFor="component-filled">Bank Name</InputLabel>
+                                                    <OutlinedInput labelWidth={0} onChange={handleInput} onBlur={handleChange} id="field-bank-name" name="field-bank-name" value={formData["field-bank-name"]} />
+                                                </FormControl>
+                                            </Grid>
+                                            <Grid item xs={12} sm={6} lg={4} className={classes.cutomInputGrid}>
+                                                <FormControl required variant="outlined" fullWidth className={getInputClasses("field-account-number") + ' requiredInput'}>
+                                                    <InputLabel htmlFor="component-filled">Account Number</InputLabel>
+                                                    <OutlinedInput labelWidth={0} onChange={handleInput} onBlur={handleChange} id="field-account-number" name="field-account-number" value={formData["field-account-number"]} />
+                                                </FormControl>
+                                            </Grid>
+                                            <Grid item xs={12} sm={6} lg={4} className={classes.cutomInputGrid}>
+                                                <FormControl required variant="outlined" fullWidth className={getInputClasses("field-routing-number") + ' requiredInput'}>
+                                                    <InputLabel htmlFor="component-filled">Routing Number</InputLabel>
+                                                    <OutlinedInput labelWidth={0} onChange={handleInput} onBlur={handleChange} id="field-routing-number" name="field-routing-number" value={formData["field-routing-number"]} />
+                                                </FormControl>
+                                            </Grid>
+                                            <Grid item xs={12} sm={12} lg={8} className={classes.cutomInputGrid}>
+                                                <FormControl required variant="outlined" fullWidth className={getInputClasses("field-bank-address") + ' requiredInput'}>
+                                                    <InputLabel htmlFor="component-filled">Bank Address</InputLabel>
+                                                    <OutlinedInput labelWidth={0} onChange={handleInput} onBlur={handleChange} id="field-bank-address" name="field-bank-address" value={formData["field-bank-address"]} />
+                                                </FormControl>
+                                            </Grid>
+                                            <Grid item xs={12} sm={6} lg={4} className={classes.cutomInputGrid}>
+                                                <FormControl variant="outlined" fullWidth className={'custom-form-control'}>
+                                                    <InputLabel htmlFor="component-filled">Floor/Unit/Suite</InputLabel>
+                                                    <OutlinedInput labelWidth={0} disabled={isMyAccount && !billingAddressEdit} id="address_suit" name="address_suit" value={getInputValue("address_suit")} onChange={handleChange} />
+                                                </FormControl>
+                                            </Grid>
+                                            <Grid item xs={12} sm={6} lg={4} className={classes.cutomInputGrid}>
+                                                <FormControl required variant="outlined" fullWidth className={getInputClasses("field-directPay-city") + ' requiredInput'}>
+                                                    <InputLabel htmlFor="component-filled">City</InputLabel>
+                                                    <OutlinedInput labelWidth={0} onChange={handleInput} onBlur={handleChange} id="field-directPay-city" name="field-directPay-city" value={formData["field-directPay-city"]} />
+                                                </FormControl>
+                                            </Grid>
+                                            <Grid item xs={12} sm={6} lg={4} className={classes.cutomInputGrid}>
+                                                <FormControl required variant="outlined" fullWidth className={getInputClasses("field-bank-state") + ' requiredInput'}>
+                                                    <InputLabel htmlFor="field-bank-state">State</InputLabel>
+                                                    <Select value={formData["field-bank-state"]} onChange={handleInput} onBlur={handleChange}
+                                                        input={<OutlinedInput labelWidth={0} name="field-bank-state" id="field-bank-state" />}>
+                                                        {staticData.states.map(state => (
+                                                            <MenuItem key={state.name} value={state.name}>
+                                                                {state.code}-{state.name}
+                                                            </MenuItem>
+                                                        ))}
+                                                    </Select>
+                                                </FormControl>
+                                            </Grid>
+                                            <Grid item xs={12} sm={6} lg={4} className={classes.cutomInputGrid}>
+                                                <FormControl required variant="outlined" fullWidth className={getInputClasses("field-directPay-zip") + ' requiredInput'}>
+                                                    <InputLabel htmlFor="component-filled">Zip Code</InputLabel>
+                                                    <OutlinedInput labelWidth={0} onChange={handleInput} onBlur={handleChange} id="field-directPay-zip" name="field-directPay-zip" value={formData["field-directPay-zip"]} />
+                                                </FormControl>
+                                            </Grid>
+                                            <Grid item xs={12} sm={6} lg={4} className={classes.cutomInputGrid}>
+                                                <FormControl required variant="outlined" fullWidth className={getInputClasses("field-bank-phone") + ' requiredInput'}>
+                                                    <InputLabel htmlFor="component-filled">Bank Telephone</InputLabel>
+                                                    <OutlinedInput labelWidth={0} onChange={handleInput} onBlur={handleChange} id="field-bank-phone" name="field-bank-phone" value={formData["field-bank-phone"]}
+                                                        inputComponent={TextMaskCustom} />
+                                                </FormControl>
+                                            </Grid>
+                                        </Fragment>
+                                    }
+                                    {window.SB_IsMobileView && !isMyAccount &&
+                                        <Grid item xs={12} sm={6} lg={4} className={classes.cutomInputGrid}>
+                                            <FormControl required variant="outlined" fullWidth>
+                                                <Button color="success" size="lg" onClick={() => this.handleDone("buyerInfo")} className="done_button">Done</Button>
+                                            </FormControl>
+                                        </Grid>
+                                    }
+                                </Grid>
+                            </div>
+                        </ExpansionPanelDetails>
+                    </ExpansionPanel>
+                </Grid>
+                {formData["direct-pay"] === '1' &&
+                    <Grid className={classes.panelWrapperBox + (isMyAccount ? ' myAccountPanelWrapper' : '')}>
+                        <ExpansionPanel className={classes.expansionPanelAS} expanded={!window.SB_IsMobileView || isMyAccount ? true : expanded === 'paymentInfo'} onChange={this.handleChange('paymentInfo')} >
+                            <ExpansionPanelSummary className={classes.expansionPanelSummaryAS} expandIcon={isMyAccount ? ' ' : <i className={this.state.validPanels.includes("paymentInfo") && expanded !== "paymentInfo" ? "sb-icon-panel-success" : "sb-icon-panel-arrow"}></i>}>
+                                <Grid container
+                                    direction="row"
+                                    justify="space-between"
+                                    alignItems="center"
+                                    className={isMyAccount ? classes.containerMyaccount : ''} >
+                                    <Grid item xs={isMyAccount ? 9 : 12} sm={6} lg={6}>
+                                        <Typography className="form__heading" noWrap>
+                                            RECIPIENT’S ADDRESS
+                                    </Typography>
+                                    </Grid>
+                                    {isMyAccount ?
+                                        <Grid item xs={3} sm={6} lg={6} className={'text-right'}>
+                                            <Button name='paymentInfoEdit' onClick={onClick} className={classes.btnMyAccount + (paymentInfoEdit ? " save" : " edit")}>
+                                                {paymentInfoEdit ? "Save" : "Edit"}
+                                            </Button>
+                                        </Grid>
+                                        :
+                                        <Hidden xsDown>
+                                            <Grid item xs={12} sm={6} lg={6}>
+                                                <Typography className="form__sub-heading" color="primary" noWrap>
+                                                    Blue fields mandatory.
+                                        </Typography>
+                                            </Grid>
+                                        </Hidden>
+                                    }
+                                </Grid>
+                            </ExpansionPanelSummary>
+                            <ExpansionPanelDetails className={classes.expansionPanelDetailsAS}>
+                                {!isMyAccount &&
+                                    <Hidden smUp>
+                                        <Typography className="form__sub-heading" color="primary" noWrap>
+                                            Blue fields mandatory.
+                                    </Typography>
+                                    </Hidden>
+                                }
+                                <div className={classes.fullWidth}>
+                                    <Grid container spacing={32} className={"space-reset " + classes.cutomInputGridWrapper}>
+                                        <Grid item xs={12} sm={6} lg={4} className={classes.cutomInputGrid}>
+                                            <FormControl required variant="outlined" fullWidth className={getInputClasses("field-same-as-home-address") + ' requiredInput'}>
+                                                <InputLabel htmlFor="field-same-as-home-address">Same As Home Address?</InputLabel>
+                                                <Select value={formData["field-same-as-home-address"]} onChange={handleInput} onBlur={handleChange}
+                                                    input={<OutlinedInput labelWidth={0} name="field-same-as-home-address" id="field-same-as-home-address" />}>
+                                                    {staticData.Same_As_Home_Address.map(homeAddress => (
+                                                        <MenuItem key={homeAddress.value} value={homeAddress.value}>
+                                                            {homeAddress.label}
+                                                        </MenuItem>
+                                                    ))}
+                                                </Select>
+                                            </FormControl>
+                                        </Grid>
+                                    </Grid>
+                                </div>
+                            </ExpansionPanelDetails>
+                        </ExpansionPanel>
+                    </Grid>
+                }
+            </div>
+        )
+    }
+}
+
+export default withStyles(onBoardingStyle, customInputStyle)(DirectPay);
