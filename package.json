@@ -1,7 +1,7 @@
 {
   "name": "seller-bailout",
   "version": "0.1.0",
-  "homepage": "https://sbtech.gandiva.tech/dev",
+  "homepage": "",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^3.5.1",
@@ -37,7 +37,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "proxy": "https://dev.cattinc.com/sbtcrm/api",
+  "proxy": "",
   "eslintConfig": {
     "extends": "react-app"
   },
