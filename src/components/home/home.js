@@ -520,7 +520,7 @@ class home extends React.Component {
                                     <div className={classes.testimonialsActions}>
                                         <div className={classes.callout}>
                                             <p>Get Started :</p>
-                                            <Button color={"success"} size="lg" href="true" className={classes.btn}>Seller  Form</Button>
+                                            <Button color={"success"} size="lg" href="seller-form" className={classes.btn}>Seller  Form</Button>
                                         </div>
                                         <i className="sb-icon-door"></i>
                                     </div>

@@ -368,27 +368,27 @@ class Footer extends React.Component {
                     </ListItem>
                     <ListItem className={classes.socialListItem}>
                       <IconButton disableRipple component="a" className={classes.socialLink}>
-                        <span className="sb-icon-twitter"></span>
+                      <a href="www.ask.com">    <span className="sb-icon-twitter"></span> </a>
                       </IconButton>
                     </ListItem>
                     <ListItem className={classes.socialListItem}>
                       <IconButton disableRipple component="a" className={classes.socialLink}>
-                        <span className="sb-icon-instagram"></span>
+                      <a href="www.ask.com">  <span className="sb-icon-instagram"></span> </a>
                       </IconButton>
                     </ListItem>
                     <ListItem className={classes.socialListItem}>
                       <IconButton disableRipple component="a" className={classes.socialLink}>
-                        <span className="sb-icon-google-plus"></span>
+                      <a href="www.ask.com">  <span className="sb-icon-google-plus"></span> </a>
                       </IconButton>
                     </ListItem>
                     <ListItem className={classes.socialListItem}>
                       <IconButton disableRipple component="a" className={classes.socialLink}>
-                        <span className="sb-icon-pintrest"></span>
+                      <a href="www.ask.com"> <span className="sb-icon-pintrest"></span> </a>
                       </IconButton>
                     </ListItem>
                     <ListItem className={classes.socialListItem}>
                       <IconButton disableRipple component="a" className={classes.socialLink}>
-                        <span className="sb-icon-linkedin"></span>
+                      <a href="www.ask.com"> <span className="sb-icon-linkedin"></span> </a>
                       </IconButton>
                     </ListItem>
                     <ListItem className={classes.socialListItem}>
