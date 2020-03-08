@@ -363,7 +363,7 @@ class Footer extends React.Component {
                   >
                     <ListItem className={classes.socialListItem}>
                       <IconButton disableRipple component="a" className={classes.socialLink}>
-                        <span className="sb-icon-facebook"></span>
+                        <a href="www.ask.com"> <span className="sb-icon-facebook"></span>  </a>
                       </IconButton>
                     </ListItem>
                     <ListItem className={classes.socialListItem}>

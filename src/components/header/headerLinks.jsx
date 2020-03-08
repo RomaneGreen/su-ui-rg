@@ -30,6 +30,7 @@ function HeaderLinks({ ...props }) {
     props.dispatch(authenticateActions.logout());
   }
   return (
+   
     <div className="navigation-wrapper">
       <Hidden mdDown>
         <List className={classes.list}>
@@ -42,6 +43,7 @@ function HeaderLinks({ ...props }) {
               </Button>
               </NavLink>
             </ListItem> */}
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <ListItem className={classes.listItem}>
               <NavLink exact to={`${process.env.PUBLIC_URL}/how-it-works`}>
                 <Button color="transparent" component='span' className={classes.navLink}>
