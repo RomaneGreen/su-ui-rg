@@ -9,7 +9,7 @@ import GridItem from "../uiComponent/Grid/GridItem";
 import footerStyle from "../../assets/jss/material-kit-react/components/footerStyle.jsx";
 import Button from "../uiComponent/CustomButtons/Button";
 import FooterHOC from "../../components/hoc/footerHOC";
-import logo from "../../assets/images/footerLogo.svg";
+import footerLogo from "../../assets/images/footerLogo.svg";
 import dmca from "../../assets/images/dmca.png";
 import footerUser from "../../assets/images/footer-user.png";
 
@@ -296,7 +296,7 @@ class Footer extends React.Component {
             <GridContainer className={classes.footerBottom}>
               <GridItem xs={12} sm={12} lg={4}>
                 <div className={classes.footerLogo}>
-                  <a href="/"><img src={logo} alt="Sell Up" /></a>
+                  <a href="/"><img className="footerLogo" src={footerLogo} alt="Sell Up" /></a>
                   <Typography>
                     Sell Up is a new technology-driven<br/> real estate marketplace that helps<br/> Sellers and Buyers connect faster.
                   </Typography>
