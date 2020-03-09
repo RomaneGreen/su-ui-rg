@@ -259,7 +259,7 @@ class BuyerPlan extends React.Component {
             , <div className={planBoxClasses(3) + ' firstMover'}>
                 <div className={classes.planHeadingContainer}>
                     <Typography variant={'h4'} className={classes.planHeading}>FIRST-MOVER INVESTOR</Typography>
-                    <Typography className={classes.planSubHeading}>For Institutional and<br/> Professional Investor</Typography>
+                    <Typography className={classes.planSubHeading}>For Institutional and<br/> Professional Investors</Typography>
                 </div>
                 <div className={classes.planImg}>
                     <img src={firstMoverPlan} alt="" />
