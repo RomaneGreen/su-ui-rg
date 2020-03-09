@@ -296,9 +296,9 @@ class Footer extends React.Component {
             <GridContainer className={classes.footerBottom}>
               <GridItem xs={12} sm={12} lg={4}>
                 <div className={classes.footerLogo} >
-                  <a href="/">
-                  <img className="footerLogo"    src={footerLogo} alt="Sell Up" />
-                    </a>
+                  
+                  <img className="footerLogo"  onClick={() =>  window.open('/')} src={footerLogo} alt="Sell Up" />
+                   
                   <Typography>
                     Sell Up is a new technology-driven<br/> real estate marketplace that helps<br/> Sellers and Buyers connect faster.
                   </Typography>
