@@ -11,7 +11,14 @@ import infoBg from "../../../images/intro-bg.png";
     alignItems: 'center',
     '& > p':{
       textAlign:'center'
+    },
+    emphasisText:{
+      backgroundColor: 'red',
+      '& > p':{
+        textAlign:'center'
+      }
     }
+      
   },
   intro:{
     backgroundColor:'#ecf7fe',

@@ -19,6 +19,9 @@ import axios from 'axios';
 //     return Math.round(Math.random() * 20) - 10;
 // }
 
+
+
+
 function TextMaskCustom(props) {
     const { inputRef, ...other } = props;
 
@@ -59,7 +62,7 @@ const MessageSentComponent = (props) => {
     return (/* Success Message Box 2 Show Hide Top and success field-message */
         <div className={classes.successMsg}>
             <Typography variant="h4">SENT !</Typography>
-            <p>Thank you for your inquiry, our<br/> office will be intouch momentarily.</p>
+            <p>Thank you for your inquiry, our<br/> office will be in touch momentarily.</p>
             <div class={classes.sucsBtm}>
                 <Grid item xs={12} className={classes.sellerBailoutLogo}>
                     <Typography noWrap>

@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import Button from "../uiComponent/CustomButtons/Button";
 
 import intoImg from "../../assets/images/intro-image-2.png";
+import buyerImg from "../../assets/images/buyerImg.png";
 import intoImgSM from "../../assets/images/intro-image-2-1.png";
 import notQualifyImg from "../../assets/images/buyer-image-1.png";
 import qualifyImg from "../../assets/images/buyer-image-2.png";
@@ -62,7 +63,7 @@ class BuyerLandingPage extends React.Component {
 							<Hidden mdDown>
 								<GridItem xs={12} sm={12} md={7} lg={7} className={classes.buyerPicture}>
 									<div className={classes.introImg}>
-										<img src={intoImg} alt="" />
+										<img src={buyerImg} alt="buyerImg" />
 									</div>
 								</GridItem>
 							</Hidden>

@@ -9,6 +9,12 @@ import { Link } from "react-router-dom";
 
 import titleDash from "../assets/images/title-dash.png";
 
+
+
+
+
+
+
 class AboutUs extends React.Component {
     render() {
         const { classes } = this.props;
@@ -41,11 +47,13 @@ class AboutUs extends React.Component {
                             </div>
                             <div className={classes.aboutContent}>
                                 <p>Life happens.</p>
-                                <p>Sometimes you <b>need</b> to sell fast.</p>
-                                <p>Most times you just <b><i><u>want</u></i></b> to sell fast.</p>
-                                <p>Regardless of your reason, we’ll get you to SOLD faster at a lower-cost.</p>
-                                <p>Sell Up is a new patent pending, technology-driven company that provides<br/> a time-sensitive real estate marketplace and highly specialized brokerage<br/> to help stressed, distressed, and non-distressed sellers match with qualified buyers quicker than anyone else.</p>
-                                <p>Our buyers are ready, willing, and able to move fast. They also subscribe to<br/> be part of our platform which gives them the exclusive right to make offers<br/> on your property first.</p>
+                                <p>Sometimes you <b style={{color: 'black'}}>need</b> to sell fast.</p>
+                                <p>Most times you just <b style={{color: 'black'}} ><i><u>want</u></i></b> to sell fast.</p>
+                                <p>No matter your reason, we’ll get you to SOLD faster at a lower-cost.</p>
+                                <p>SellUp is a new patent pending, technology-driven company that provides<br/> a time-sensitive real estate marketplace and highly specialized brokerage<br/> to help stressed, distressed, and non-distressed sellers match with qualified buyers quicker than anyone else.</p>
+                                <p>Our sellers get to list privately first, so they can make a sale discreetly and quietly, often before their listings even make it on the market. </p>
+                                <p>Our buyers see off-market listings first. They also subscribe to our platform <br/> which gives them the exclusive right to make offers on your property first,<br/> leading to faster sales during this coveted period. </p>
+                                
                             </div>
                             <div className={classes.sellerInfo}>
                                 <div className={classes.sellerBlock}>
@@ -84,13 +92,13 @@ class AboutUs extends React.Component {
                                 </div>
                             </div>
                             <div className={classes.aboutContent}>
-                                <p>Using our proprietary marketplace, we generate the best offer for you based on multiple offers from several buyers and present them to you. By doing this, <b>you</b> can decide who the best buyer is for you.</p>
+                                <p>Using our proprietary marketplace, we generate multiple offers in the <br/>shortest time and present them to you. Here, you can decide which is  the best offer for you.</p>
                                 <p>Sound good? There's more.</p>
-                                <p>Whether you are selling real estate or mortgage notes, we know your time<br/> is limited, that is why all types of property are always sold AS-IS on our marketplace.</p>
+                                <p>Whether you are selling real estate or mortgage notes, we know your time<br/> is limited, that is why all types of property are always sold AS-IS.</p>
                                 <p>As a seller, you are not required to make expensive property repairs,<br/> time-consuming renovations or even turn your notes back to re-performing before a sale.</p>
                                 <p>Your time is most valuable.</p>
                                 <p>Let us move you to a faster closing.</p>
-                                <p><span>Welcome to Sell Up.</span></p>
+                                <p><span style={{color: 'black'}}>Welcome to SellUp.</span></p>
                             </div>
                             <div className={classes.sellButton}>
                                 <Typography variant="span">Ready to Sell? <b>Submit Here:</b></Typography>
