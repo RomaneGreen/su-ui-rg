@@ -14,6 +14,7 @@ import Logo from "../assets/images/logo-circular.svg";
 // TODO: why this in component and not in redux?
 import {BASE_URL} from "../common/config";
 import axios from 'axios';
+import './contact.css';
 
 // function rand() {
 //     return Math.round(Math.random() * 20) - 10;
@@ -86,6 +87,8 @@ class ContactUs extends React.Component {
         invalidContactFormFields: [],
         validContactFormFields: [],
         contactFormData: staticData.contactFormData,
+        disabled: true,
+        formStep: 0
     };
 
     submitForm() {
@@ -136,7 +139,9 @@ class ContactUs extends React.Component {
         this.setState({
             contactFormData: {
                 ...this.state.contactFormData, [event.target.name]: event.target.value,
+                
             },
+            
         });
     }
     handleChange = event => {
@@ -146,7 +151,7 @@ class ContactUs extends React.Component {
                 ...this.state.contactFormData, [event.target.name]: event.target.value,
             },
         });
-        if (event.target.value === "" || event.target.value === null) {
+        if (event.target.value === "" || event.target.value === null) { 
             if (!invalidContactFormFields.includes(event.target.name)) {
                 invalidContactFormFields.push(event.target.name);
                 const index = validContactFormFields.indexOf(event.target.name);
@@ -224,7 +229,7 @@ class ContactUs extends React.Component {
         if (invalidContactFormFields.length) {
             this.setState({ invalidContactFormFields });
             event.preventDefault(); // Let's stop this event.
-            event.stopPropagation();
+            event.stopPropagation(); 
             return;
         }
         this.submitForm();
@@ -242,9 +247,11 @@ class ContactUs extends React.Component {
         return invalidFields;
     }
 
+   
     render() {
         const { classes } = this.props;
         const { validContactFormFields, invalidContactFormFields, contactFormData } = this.state;
+        console.log("contactformdata:", contactFormData);
         const getInputClasses = (fieldName) => {
             return `custom-form-control ${classes.requiredInput} hook-required ${invalidContactFormFields.includes(fieldName) ? 'error_class' :
                 contactFormData[fieldName] !== '' && validContactFormFields.includes(fieldName) ? 'success_class' : ''}`
@@ -399,7 +406,7 @@ class ContactUs extends React.Component {
                                             <Grid item xs={12} sm={12} className={classes.cutomInputGrid}>
                                                 <div className={classes.textCenter}>
                                                     <div className={classes.contactBtn} onClick={this.handleSend} to={`${process.env.PUBLIC_URL}/seller-form`}>
-                                                        <Button color={"primary"} size="lg" className={classes.btn}>Send</Button>
+                                                        <Button   color={"secondary"}  className="{classNames.btn}"  size="lg" >Send</Button>
                                                     </div>
                                                 </div>
                                             </Grid>
@@ -514,7 +521,7 @@ class ContactUs extends React.Component {
                                                 <Grid item xs={12} sm={12} className={classes.cutomInputGrid}>
                                                     <div className={classes.textCenter}>
                                                         <div className={classes.contactBtn} to={`${process.env.PUBLIC_URL}/seller-form`}>
-                                                            <Button color={"primary"} size="lg" onClick={this.handleSend} className={classes.btn}>Send</Button>
+                                                            <Button color={"primary"} disabled={this.state.disabled} size="lg" onClick={this.handleSend} className={classes.btn}>Sendx</Button>
                                                         </div>
                                                     </div>
                                                 </Grid>

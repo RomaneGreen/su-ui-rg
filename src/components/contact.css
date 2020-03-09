@@ -1,0 +1,12 @@
+.sendButton{
+    pointer-events: none !important;
+    background-color: darkorchid;
+    border: 1px solid red;
+}
+
+.sendButton:hover{
+    pointer-events: none !important;
+    background-color: darkorchid;
+    border: 1px solid green;
+}
+

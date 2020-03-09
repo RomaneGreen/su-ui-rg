@@ -295,8 +295,10 @@ class Footer extends React.Component {
           <div className={classes.container}>
             <GridContainer className={classes.footerBottom}>
               <GridItem xs={12} sm={12} lg={4}>
-                <div className={classes.footerLogo}>
-                  <a href="/"><img className="footerLogo" src={footerLogo} alt="Sell Up" /></a>
+                <div className={classes.footerLogo} >
+                  <a href="/">
+                  <img className="footerLogo"    src={footerLogo} alt="Sell Up" />
+                    </a>
                   <Typography>
                     Sell Up is a new technology-driven<br/> real estate marketplace that helps<br/> Sellers and Buyers connect faster.
                   </Typography>
@@ -362,18 +364,19 @@ class Footer extends React.Component {
                     className={classes.footerSocialList}
                   >
                     <ListItem className={classes.socialListItem}>
-                      <IconButton disableRipple component="a" className={classes.socialLink}>
-                        <a href="https://www.facebook.com/sellupco/"> <span className="sb-icon-facebook"></span>  </a>
+                      <IconButton  disableRipple component="a" onClick={() => window.open('https://www.facebook.com/sellupco/')} className={classes.socialLink}>
+                        <span className="sb-icon-facebook"></span>  
                       </IconButton>
                     </ListItem>
                     <ListItem className={classes.socialListItem}>
-                      <IconButton disableRipple component="a" className={classes.socialLink}>
-                      <a href="https://twitter.com/sellupco">    <span className="sb-icon-twitter"></span> </a>
+                      <IconButton disableRipple component="a" onClick={() => window.open('https://www.twitter.com/sellupco/')} className={classes.socialLink}>
+                         <span className="sb-icon-twitter"></span> 
                       </IconButton>
+    
                     </ListItem>
                     <ListItem className={classes.socialListItem}>
-                      <IconButton disableRipple component="a" className={classes.socialLink}>
-                      <a href="https://www.instagram.com/sellupco/">  <span className="sb-icon-instagram"></span> </a>
+                      <IconButton disableRipple component="a" onClick={() => window.open('https://www.instagram.com/sellupco/')} className={classes.socialLink}>
+                       <span className="sb-icon-instagram"></span> 
                       </IconButton>
                     </ListItem>
                     <ListItem className={classes.socialListItem}>
@@ -382,18 +385,18 @@ class Footer extends React.Component {
                       </IconButton>
                     </ListItem>
                     <ListItem className={classes.socialListItem}>
-                      <IconButton disableRipple component="a" className={classes.socialLink}>
-                      <a href="https://www.pinterest.com/sellupco/"> <span className="sb-icon-pintrest"></span> </a>
+                      <IconButton disableRipple component="a" onClick={() => window.open('https://www.pinterest.com/sellupco/')} className={classes.socialLink}>
+                       <span className="sb-icon-pintrest"></span> 
                       </IconButton>
                     </ListItem>
                     <ListItem className={classes.socialListItem}>
-                      <IconButton disableRipple component="a" className={classes.socialLink}>
-                      <a href="https://www.linkedin.com/company/sellupco"> <span className="sb-icon-linkedin"></span> </a>
+                      <IconButton disableRipple component="a" onClick={() => window.open('https://www.linkedin.com/company/sellupco/')} className={classes.socialLink}>
+                      <span className="sb-icon-linkedin"></span>
                       </IconButton>
                     </ListItem>
                     <ListItem className={classes.socialListItem}>
-                      <IconButton disableRipple component="a" className={classes.socialLink}>
-                      <a href="https://www.youtube.com/channel/UCTZtdhIZ9_gT3BF_ILds4Eg"> <span className="sb-icon-youtube"></span></a>
+                      <IconButton disableRipple component="a" onClick={() => window.open('https://www.youtube.com/channel/UCTZtdhIZ9_gT3BF_ILds4Eg')} className={classes.socialLink}>
+                     <span className="sb-icon-youtube"></span>
                       </IconButton>
                     </ListItem>
                   </List>

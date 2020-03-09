@@ -459,6 +459,7 @@ class BuyerForm extends React.Component {
                         color="primary"
                         size="lg"
                         disabled={!this.isValidStep()}
+                        //disabled={true}
                         onClick={this.handleNext}
                         className={classNames(classes.buttonSecondry)}
                       >
