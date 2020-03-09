@@ -39,11 +39,13 @@ function TextMaskCustom(props) {
 function getModalStyle() {
     const top = 50;
     const left = 50;
+    const height = 20000000;
 
     return {
         top: `40%`,
         left: `${left}%`,
         transform: `translate(-${top}%, -${left}%)`,
+       
     };
 }
 
@@ -91,6 +93,8 @@ class ContactUs extends React.Component {
         formStep: 0
     };
 
+
+    
     submitForm() {
         axios.post(`${BASE_URL}/contactUs`, this.state.contactFormData).then(() => { this.setState({ messageSent: true }) });
     }
@@ -135,6 +139,7 @@ class ContactUs extends React.Component {
         this.setState({ open4: false });
     };
 
+     
     handleInput = event => {
         this.setState({
             contactFormData: {
@@ -144,11 +149,14 @@ class ContactUs extends React.Component {
             
         });
     }
+
+    
     handleChange = event => {
         let { invalidContactFormFields, validContactFormFields } = this.state;
         this.setState({
             contactFormData: {
                 ...this.state.contactFormData, [event.target.name]: event.target.value,
+                
             },
         });
         if (event.target.value === "" || event.target.value === null) { 
@@ -215,11 +223,12 @@ class ContactUs extends React.Component {
             validContactFormFields: validContactFormFields
         });
     };
-
+   
     validateEmail(value) {
         /* eslint no-useless-escape: "off" */
         const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         return emailRegex.test(String(value).toLowerCase());
+       
     };
 
     handleSend = event => {
@@ -232,8 +241,15 @@ class ContactUs extends React.Component {
             event.stopPropagation(); 
             return;
         }
+       
         this.submitForm();
     }
+
+      handleMsg = () => {
+          this.setState({
+              disabled: false
+          })
+      }
 
     validateContactFormData = formData => {
         const contactForm = ["field-first-name", "field-last-name", "field-phone", "field-email", "field-subject", "field-message"];
@@ -243,11 +259,11 @@ class ContactUs extends React.Component {
                 invalidFields.push(field);
             }
         });
-
+        let rrr = invalidFields.length > 0 ? true : false;
         return invalidFields;
     }
 
-   
+
     render() {
         const { classes } = this.props;
         const { validContactFormFields, invalidContactFormFields, contactFormData } = this.state;
@@ -515,7 +531,7 @@ class ContactUs extends React.Component {
                                                     <FormControl required variant="outlined" fullWidth className={getInputClasses("field-message") + ' textAreaInput requiredInput'}>
                                                         <InputLabel htmlFor="field-message">Message</InputLabel>
                                                         <OutlinedInput multiline
-                                                            rows="6" labelWidth={0} id="field-message" name="field-message" value={contactFormData["field-message"]} onChange={this.handleInput} onBlur={this.handleChange} />
+                                                            rows="6" labelWidth={0} id="field-message" name="field-message" value={contactFormData["field-message"]} onClick={this.handleMsg} onChange={this.handleInput} onBlur={this.handleChange} />
                                                     </FormControl>
                                                 </Grid>
                                                 <Grid item xs={12} sm={12} className={classes.cutomInputGrid}>
@@ -524,7 +540,7 @@ class ContactUs extends React.Component {
                                                             <Button color={"primary"} disabled={this.state.disabled} size="lg" onClick={this.handleSend} className={classes.btn}>Sendx</Button>
                                                         </div>
                                                     </div>
-                                                </Grid>
+                                                </Grid> 
                                             </Grid>
                                     }
                                 </div>
