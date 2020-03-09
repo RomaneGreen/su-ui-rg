@@ -13,7 +13,7 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { sellerActions } from "../actions";
 import componentsStyle from "../assets/jss/material-kit-react/views/components";
-import logo from "../assets/images/logo.png";
+import logo from "../assets/images/headerLogo.svg";
 import logoSmall from "../assets/images/logo-circular.svg";
 import "../assets/scss/material-kit-react.css?v=1.3.0";
 import JssProvider from 'react-jss/lib/JssProvider';

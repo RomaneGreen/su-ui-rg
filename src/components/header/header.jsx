@@ -20,6 +20,7 @@ import HeaderLinks from './headerLinks';
 // core components
 import headerStyle from "../../assets/jss/material-kit-react/components/headerStyle.jsx";
 import Logo from "../../assets/images/logo-circular.svg";
+import headerLogo from "../../assets/images/headerLogo.svg";
 
 class Header extends React.Component {
   constructor(props) {

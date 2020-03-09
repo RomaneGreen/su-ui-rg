@@ -363,17 +363,17 @@ class Footer extends React.Component {
                   >
                     <ListItem className={classes.socialListItem}>
                       <IconButton disableRipple component="a" className={classes.socialLink}>
-                        <a href="www.ask.com"> <span className="sb-icon-facebook"></span>  </a>
+                        <a href="https://www.facebook.com/sellupco/"> <span className="sb-icon-facebook"></span>  </a>
                       </IconButton>
                     </ListItem>
                     <ListItem className={classes.socialListItem}>
                       <IconButton disableRipple component="a" className={classes.socialLink}>
-                      <a href="www.ask.com">    <span className="sb-icon-twitter"></span> </a>
+                      <a href="https://twitter.com/sellupco">    <span className="sb-icon-twitter"></span> </a>
                       </IconButton>
                     </ListItem>
                     <ListItem className={classes.socialListItem}>
                       <IconButton disableRipple component="a" className={classes.socialLink}>
-                      <a href="www.ask.com">  <span className="sb-icon-instagram"></span> </a>
+                      <a href="https://www.instagram.com/sellupco/">  <span className="sb-icon-instagram"></span> </a>
                       </IconButton>
                     </ListItem>
                     <ListItem className={classes.socialListItem}>
@@ -383,17 +383,17 @@ class Footer extends React.Component {
                     </ListItem>
                     <ListItem className={classes.socialListItem}>
                       <IconButton disableRipple component="a" className={classes.socialLink}>
-                      <a href="www.ask.com"> <span className="sb-icon-pintrest"></span> </a>
+                      <a href="https://www.pinterest.com/sellupco/"> <span className="sb-icon-pintrest"></span> </a>
                       </IconButton>
                     </ListItem>
                     <ListItem className={classes.socialListItem}>
                       <IconButton disableRipple component="a" className={classes.socialLink}>
-                      <a href="www.ask.com"> <span className="sb-icon-linkedin"></span> </a>
+                      <a href="https://www.linkedin.com/company/sellupco"> <span className="sb-icon-linkedin"></span> </a>
                       </IconButton>
                     </ListItem>
                     <ListItem className={classes.socialListItem}>
                       <IconButton disableRipple component="a" className={classes.socialLink}>
-                        <span className="sb-icon-youtube"></span>
+                      <a href="https://www.youtube.com/channel/UCTZtdhIZ9_gT3BF_ILds4Eg"> <span className="sb-icon-youtube"></span></a>
                       </IconButton>
                     </ListItem>
                   </List>
