@@ -9,7 +9,7 @@ import GridItem from "../uiComponent/Grid/GridItem";
 import footerStyle from "../../assets/jss/material-kit-react/components/footerStyle.jsx";
 import Button from "../uiComponent/CustomButtons/Button";
 import FooterHOC from "../../components/hoc/footerHOC";
-import logo from "../../assets/images/logo.png";
+import logo from "../../assets/images/footerLogo.svg";
 import dmca from "../../assets/images/dmca.png";
 import footerUser from "../../assets/images/footer-user.png";
 
