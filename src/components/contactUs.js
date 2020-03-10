@@ -500,13 +500,13 @@ class ContactUs extends React.Component {
                                                 <Grid item xs={12} sm={6} className={classes.cutomInputGrid}>
                                                     <FormControl required variant="outlined" fullWidth className={getInputClasses("field-first-name") + ' requiredInput'}>
                                                         <InputLabel htmlFor="field-first-name">First Name</InputLabel>
-                                                        <OutlinedInput labelWidth={0} onChange={this.handleInput} onBlur={this.handleChange} id="field-first-name" name="field-first-name" value={contactFormData["field-first-name"]} />
+                                                        <OutlinedInput labelWidth={0} onChange={this.handleInput} onBlur={this.handleChange} id="field-first-name" name="field-first-name" value={contactFormData["field-first-name"].toLocaleUpperCase()} />
                                                     </FormControl>
                                                 </Grid>
                                                 <Grid item xs={12} sm={6} className={classes.cutomInputGrid}>
                                                     <FormControl required variant="outlined" fullWidth className={getInputClasses("field-last-name") + ' requiredInput'}>
-                                                        <InputLabel htmlFor="field-last-name">Last Name</InputLabel>
-                                                        <OutlinedInput labelWidth={0} id="field-last-name" name="field-last-name" value={contactFormData["field-last-name"]} onChange={this.handleInput} onBlur={this.handleChange} />
+                                                        <InputLabel  htmlFor="field-last-name">Last Name</InputLabel>
+                                                        <OutlinedInput labelWidth={0} id="field-last-name" name="field-last-name" value={contactFormData["field-last-name"].toLocaleUpperCase()} onChange={this.handleInput} onBlur={this.handleChange} />
                                                     </FormControl>
                                                 </Grid>
                                                 <Grid item xs={12} sm={6} className={classes.cutomInputGrid}>
@@ -537,7 +537,7 @@ class ContactUs extends React.Component {
                                                 <Grid item xs={12} sm={12} className={classes.cutomInputGrid}>
                                                     <div className={classes.textCenter}>
                                                         <div className={classes.contactBtn} to={`${process.env.PUBLIC_URL}/seller-form`}>
-                                                            <Button color={"primary"} disabled={this.state.disabled} size="lg" onClick={this.handleSend} className={classes.btn}>Sendx</Button>
+                                                            <Button color={"primary"} disabled={this.state.disabled} size="lg" onClick={this.handleSend} className={classes.btn}>Send</Button>
                                                         </div>
                                                     </div>
                                                 </Grid> 
