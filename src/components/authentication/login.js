@@ -155,8 +155,8 @@ class Login extends React.Component {
         </div>
         <div className={classes.boxFooter}>
           Mistake? Go To:
-          <Link to={`${process.env.PUBLIC_URL}/buyer-form`}>
-            <span>BUYER FORM</span>
+          <Link to={`${process.env.PUBLIC_URL}/create-account`}>
+            <span>CREATE ACCOUNT</span>
           </Link>
         </div>
       </div>

@@ -341,7 +341,7 @@ class BuyerInfo extends React.Component {
                                     <Grid item xs={12} sm={6} lg={4} className={classes.cutomInputGrid}>
                                         <FormControl variant="outlined" fullWidth className={'custom-form-control'}>
                                             <InputLabel htmlFor="component-filled">Job Title (If Company)</InputLabel>
-                                            <OutlinedInput labelWidth={0} id="job_title" disabled={isMyAccount && !buyerInfoEdit} name="job_title" value={getInputValue("job_title")} onChange={handleChange} />
+                                            <OutlinedInput labelWidth={0} id="job_title" disabled={isMyAccount && !buyerInfoEdit} name="job_title" value={getInputValue("job_title").charAt(0).toUpperCase() + getInputValue("job_title").substring(1)} onChange={handleChange} />
                                         </FormControl>
                                     </Grid>
                                     <Grid item xs={12} sm={6} lg={4} className={classes.cutomInputGrid}>
