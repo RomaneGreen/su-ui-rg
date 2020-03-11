@@ -78,7 +78,7 @@ class AccountInfo extends React.Component {
   };
 
   handlButtonToggle = (event, value) => {
-    if (value === "MALE" || value === "FEMALE") {
+    if (value === "MALE" || value === "FEMALE" || value === "CUSTOM") {
       this.setState({
         buyerFormData: {
           ...this.state.buyerFormData, "gender": value,

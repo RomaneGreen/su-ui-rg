@@ -1578,6 +1578,13 @@ body.fixed div[class*="MuiDrawer-root"] {
   display: flex;
   justify-content: space-between;
 }
+.toggleCustomGender {
+   border: 1px solid red;
+   margin-left: 5% !important;
+   margin-right: 5% !important;
+   padding: 12px !important;
+}
+
 .toggleCustom button {
   color: #296bcf;
   border-radius: 4px !important;

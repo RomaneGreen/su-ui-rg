@@ -388,8 +388,11 @@ class BuyerInfo extends React.Component {
                                         <Typography color="inherit" className="info-label" noWrap>GENDER</Typography>
                                         <div className={'smallGrid'}>
                                             <div className="col-as-12">
-                                                <ToggleButtonGroup value={getInputValue('gender')} exclusive onChange={handlButtonToggle} className="toggleCustom">
+                                                <ToggleButtonGroup  value={getInputValue('gender')} exclusive onChange={handlButtonToggle} className="toggleCustom">
                                                     <ToggleButton name={'gender'} color="primary" value="male">MALE</ToggleButton>
+                                                  
+                                                    <ToggleButton className="toggleCustomGender"  name={'gender'} color="primary" value="custom">CUSTOM</ToggleButton>
+                    
                                                     <ToggleButton name={'gender'} color="primary" value="female">FEMALE</ToggleButton>
                                                 </ToggleButtonGroup>
                                             </div>

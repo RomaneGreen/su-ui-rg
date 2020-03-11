@@ -116,7 +116,7 @@ class BuyerForm extends React.Component {
   };
 
   handlButtonToggle = (event, value) => {
-    if (value === "male" || value === "female") {
+    if (value === "male" || value === "female" || value === "custom") {
       this.setState({
         buyerFormData: {
           ...this.state.buyerFormData, "gender": value,
