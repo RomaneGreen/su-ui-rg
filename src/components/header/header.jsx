@@ -21,6 +21,7 @@ import HeaderLinks from './headerLinks';
 import headerStyle from "../../assets/jss/material-kit-react/components/headerStyle.jsx";
 import Logo from "../../assets/images/logo-circular.svg";
 import headerLogo from "../../assets/images/headerLogo.svg";
+import './header.css'
 
 class Header extends React.Component {
   constructor(props) {
@@ -193,7 +194,7 @@ class Header extends React.Component {
                 >
                   <span className="sb-icon-menu-open"></span>
                 </IconButton>
-                <img src={Logo} alt='Sell Up' />
+                <img className="mobilelogo" src={Logo} alt='Sellx Up' />
               </div>
             </Hidden>
           </Drawer>
